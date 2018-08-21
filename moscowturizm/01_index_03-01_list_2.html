@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MoscowTurizm</title>
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<a href="#callback" title="Если вы не смогли нам дозвонились, то оставьте заявку" class="callback" data-toggle="modal"></a>
+	<div class="container">
+		<div class="header">
+			<div class="upper clearfix">
+				<div class="logo">
+					<a href="/"><img src="img/logo.png" alt=""></a>
+				</div>
+				<div class="phones">
+					<div>
+						<a class="phone" href="tel:+74957909089">
+							<span class="prefix">+7 (495) </span>
+							<span class="number">790-90-89</span>
+						</a>
+					</div>
+					<div>
+						<a class="phone" href="tel:+74957992977">
+							<span class="prefix">+7 (495) </span>
+							<span class="number">799-29-77</span>
+						</a>
+					</div>
+				</div>
+				<div class="btns">
+					<div>
+						<a class="ticket" href="#">
+							<span>
+								<span class="ico01">&nbsp;</span>
+								Электронный <br>билет
+							</span>
+						</a>
+					</div>
+					<div>
+						<a class="program" href="#">
+							<span>
+								Наши программы <br> в Петербурге
+								<span class="ico02">&nbsp;</span>
+								<span class="triangle">&nbsp;</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bar">
+			<button type="button" id="showMenu">Меню</button>
+		</div>
+		<nav id="mainMenu">
+			<ul class="nav nav-justified menu">
+				<li><a href="#"><span class="ico03">&nbsp;</span> <span>Афиша</span></a></li>
+				<li><a href="#"><span>Команда</span></a></li>
+				<li><a href="#"><span>Где купить</span></a></li>
+				<li><a href="#"><span>Контакты</span></a></li>
+				<li><a href="#"><span>Отзывы</span></a></li>
+				<li><a href="#"><span class="ico04">&nbsp;</span> <span>Скидки</span></a></li>
+			</ul>
+		</nav>
+		<div class="tx text-center">
+			<div class="specialBig"><img src="img/special.png" alt=""></div>
+		</div>
+		<nav id="secondMenu">
+			<ul class="nav nav-justified menu second">
+				<li>
+					<a href="#">
+						<span>
+							<span class="ico05">&nbsp;</span>
+						</span>
+						<span>Экскурсии <br>на автобусе</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<span class="ico06">&nbsp;</span>
+						</span>
+						<span>Экскурсии для школьников</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="#">
+						<span>
+							<span class="ico07">&nbsp;</span>
+						</span>
+						<span>Ночные экскурсии</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<span class="ico08">&nbsp;</span>
+						</span>
+						<span>Пешеходные экскурсии</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<span class="ico09">&nbsp;</span>
+						</span>
+						<span>Поющий автобус</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<span class="ico10">&nbsp;</span>
+						</span> 
+						<span>Экскурсии <br>на теплоходе</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<main class="clearfix">
+			<div class="leftSide">
+				<div class="lmenu active">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico11">&nbsp;</span>
+							</span>
+							<span>Экскурсии <br>на автобусе</span>
+						</a>
+					</div>
+					<ul>
+						<li><a href="#">Популярные</a></li>
+						<li><a href="#">Исторические</a></li>
+						<li><a href="#">Интерактивные</a></li>
+						<li class="active"><a href="#">Музыкальные</a></li>
+						<li><a href="#">Религиозные</a></li>
+						<li><a href="#">Литературные</a></li>
+						<li><a href="#">Архитектурные</a></li>
+					</ul>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico12">&nbsp;</span>
+							</span>
+							<span>Экскурсии для школьников</span>
+						</a>
+					</div>
+					<ul>
+						<li><a href="#">Для младших классов</a></li>
+						<li><a href="#">Для старших классов</a></li>
+						<li><a href="#">На выпускной</a></li>
+						<li><a href="#">Театрализованные</a></li>
+						<li><a href="#">Обзорная</a></li>
+						<li><a href="#">Исторические</a></li>
+						<li><a href="#">Литературные</a></li>
+						<li><a href="#">День рождения</a></li>
+					</ul>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico13">&nbsp;</span>
+							</span>
+							<span>Ночные экскурсии</span>
+						</a>
+					</div>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico14">&nbsp;</span>
+							</span>
+							<span>Пешеходные экскурсии</span>
+						</a>
+					</div>
+					<ul>
+						<li><a href="#">Популярные</a></li>
+						<li><a href="#">Обзорная</a></li>
+						<li><a href="#">Исторические</a></li>
+						<li><a href="#">Литературные</a></li>
+						<li><a href="#">Архитектурные</a></li>
+						<li><a href="#">Интерактивные</a></li>
+						<li><a href="#">Для младших классов</a></li>
+					</ul>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico15">&nbsp;</span>
+							</span>
+							<span>Поющий автобус</span>
+						</a>
+					</div>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico16">&nbsp;</span>
+							</span>
+							<span>Экскурсии <br>на теплоходе</span>
+						</a>
+					</div>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico17">&nbsp;</span>
+							</span>
+							<span>Экскурсии по Подмосковью</span>
+						</a>
+					</div>
+				</div>
+				<div class="lmenu">
+					<div class="title">
+						<a href="#">
+							<span>
+								<span class="ico18">&nbsp;</span>
+							</span>
+							<span>Наши концерты</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="rightSide">
+				<ol class="breadcrumb">
+					<li><a href="#"><span class="ico51">&nbsp;</span></a></li>
+					<li><a href="#">Экскурсии</a></li>
+					<li class="active">Экскурсии на автобусе</li>
+				</ol>
+				<h1>Музыкальные экскурсии на автобусе</h1>
+				<div class="purple-bord text-center">
+					К любой из наших автобусных экскурсий вы можете присоединиться в указанные под ней даты, а также заказать ее для своей группы в любой удобный для вас день и час! 
+				</div>
+				<div class="catalog">
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card07.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Москва - территория призраков</a>
+									</h4>
+									<div class="description">
+										Самая популярная ночная пешеходная или автобусная экскурсия по Москве. Призраки и привидения, аномальные явления и геопатогенные зоны.
+									</div>
+									<div class="included">
+										<div>
+											<span class="ico20">&nbsp;</span>
+											<span class="numeric">18+</span>
+										</div>
+										<div>
+											<span class="ico21">&nbsp;</span>
+											<span class="numeric">15-50</span>
+										</div>
+										<div>
+											<span class="ico22">&nbsp;</span>
+											<span class="numeric">4</span> часа
+										</div>
+										<div>
+											<span class="ico23">&nbsp;</span>
+											от <span class="numeric">850</span> руб.
+										</div>
+										<div>
+											<span class="ico24">&nbsp;</span>
+											Автобусная
+										</div>
+										<div>
+											<span class="ico25">&nbsp;</span>
+											Чаепитие
+										</div>
+										<div>
+											<span class="ico26">&nbsp;</span>
+											Обед
+										</div>
+									</div>
+									<div class="about-excursion">
+										История, ставшая вымыслом, и вымысел, ставший реальным! За 11 лет существования этой экскурсии ее посетили более 32 000 человек. Самому старшему из них было 92, а самому младшему - 4. "Москва-территория призраков" - самая популярная экскурсия для выезда классом. шумной молодежной компанией, компанией друзей, любящих мистику и немного авантюризма.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card08.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Поющий автобус</a>
+									</h4>
+									<div class="description">
+										Это целый проект музыкальных экскурсий по нашему городу.
+									</div>
+									<div class="included">
+										<div>
+											<span class="ico20">&nbsp;</span>
+											<span class="numeric">18+</span>
+										</div>
+										<div>
+											<span class="ico21">&nbsp;</span>
+											<span class="numeric">15-50</span>
+										</div>
+										<div>
+											<span class="ico22">&nbsp;</span>
+											<span class="numeric">4</span> часа
+										</div>
+										<div>
+											<span class="ico23">&nbsp;</span>
+											от <span class="numeric">850</span> руб.
+										</div>
+										<div>
+											<span class="ico24">&nbsp;</span>
+											Автобусная
+										</div>
+										<div>
+											<span class="ico25">&nbsp;</span>
+											Чаепитие
+										</div>
+										<div>
+											<span class="ico26">&nbsp;</span>
+											Обед
+										</div>
+									</div>
+									<div class="about-excursion">
+										У каждой из низ есть три главных составляющих: живое исполнение песен под акустическую гитару, интересный и познавательный рассказ, красивые и культовые места Москвы или ближайшего Подмосковья, по которым происходит поездка. "Поющий автобус" - это самая популярная из программ для празднования Дня рождения, выезда всей семьей, для небольших корпоративных поездок. Даты проведения уточняйте в разделе "Афиша"
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card09.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Масоны и масонство. Три века в Москве</a>
+									</h4>
+									<div class="description">
+										4-часовая автобусная экскурсия в историю одного из самых таинственных общественных и культурных течений, с его отдельными выдающимися представителями, привезшими масонство в Россию и братьями, изменившими историю страны.
+									</div>
+									<div class="included">
+										<div>
+											<span class="ico20">&nbsp;</span>
+											<span class="numeric">18+</span>
+										</div>
+										<div>
+											<span class="ico21">&nbsp;</span>
+											<span class="numeric">15-50</span>
+										</div>
+										<div>
+											<span class="ico22">&nbsp;</span>
+											<span class="numeric">4</span> часа
+										</div>
+										<div>
+											<span class="ico23">&nbsp;</span>
+											от <span class="numeric">850</span> руб.
+										</div>
+										<div>
+											<span class="ico24">&nbsp;</span>
+											Автобусная
+										</div>
+										<div>
+											<span class="ico25">&nbsp;</span>
+											Чаепитие
+										</div>
+										<div>
+											<span class="ico26">&nbsp;</span>
+											Обед
+										</div>
+									</div>
+									<div class="about-excursion">
+										На нашей экскурсии мы поговорим о взглядах масонов на политику и образование, архитектуру и иконографию, на религию и смысл человеческой жизни. Рассмотрим устройство масонского Храма и убранство Ложи, выясним связь масонских сооружений с принципами древней культовой архитектуры. Научимся считывать и различать символику вольных каменщиков на фасадах московских зданий.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card10.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">По следам романа "Мастер и Маргарита"</a>
+									</h4>
+									<div class="description">
+										Автобусная или пешеходная экскурсия с посещением КЦ "Булгаковский дом" для поклонников самого культового романа прошлого века. 
+									</div>
+									<div class="about-excursion">
+										Особняк Маргариты и Патриаршие пруды, Дом Грибоедова и Тверской бульвар, площадь Никитских ворот и памятник Гоголю, подвальчик Мастера и дом Пашкова - все эти места помогут нам вновь вспомнить события великого романа, узнать интересные факты из жизни М. А. Булгакова и из его эпохи.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card11.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Москва кабаков и притонов</a>
+									</h4>
+									<div class="description">
+										Пешеходная или автобусная интерактивная экскурсия по Москве с дегустацией табачка "по-Гиляровскому" и легендарнейшей "Кончаловки" и вручением диплома кабаковеда.
+									</div>
+									<div class="about-excursion">
+										Хитровка и Грачевка, район "красных фонарей", купеческие клубы, странные общества, "Каторга" и "Ад" и - ресторан "Эрмитаж". История разгула со времен Ивана Грозного и до советской эпохи. Уникальная прогулка для тех, кто не знает, что подарить своему молодому человеку, куда сходить веселой компанией друзей и подруг, как занять свой вечер так, чтобы это было нестандартно, познавательно и интересно.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card12.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Ах, Арбат, мой Арбат</a>
+									</h4>
+									<div class="description">
+										2-часовая пешеходная экскурсия по самой легендарной пешеходной улице нашего города.
+									</div>
+									<div class="about-excursion">
+										Улица на которой свершались и разбивались судьбы, решались исторические события и творились чудеса, жили ярчайшие представители русской аристократии и богемы. особое место в экскурсии занимают архитектурные памятники Арбата. Среди них дом-представитель деревянного зодчества, дома-представители стиля ампир и эпохи модерна.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="media">
+							<div class="media-left">
+								<div class="picture">
+									<img src="img/card/card13.jpg" alt="">
+									<div class="text">
+										<p>Ближайшие экскурсии</p>
+										<p>
+											23 февраля <span>(пятница)</span><br>
+											24 февраля <span>(суббота)</span>
+										</p>
+										<a href="#" class="show">
+											<span class="ico19">&nbsp;</span>
+											<span>Посмотреть все даты</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="media-body">
+								<div class="body">
+									<h4>
+										<a href="#">Религии мира в Москве</a>
+									</h4>
+									<div class="description">
+										Тематическая автобусная экскурсия в Москве, как по городу с древней многонациональной историей, где православные христиане многие столетия соседствуют с верующими других конфессий – католиками, протестантами, старообрядцами и другими.
+									</div>
+									<div class="about-excursion">
+										На экскурсии рассказывается об основных различиях между исламом, христианством, иудаизмом, между православием, католичеством и лютеранством.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form">
+					<form method="post" action="">
+						<h4>Подписаться на наши новости и скидки</h4>
+						<div class="row-form clearfix">
+							<div class="col-form-8">
+								<input type="text" class="form-control" value="" placeholder="Представьтесь">
+							</div>
+							<div class="col-form-8">
+								<input type="text" class="form-control" value="" placeholder="E-mail">
+							</div>
+							<div class="col-form-8">
+								<button class="btn btn-red">Подписаться</button>
+							</div>
+						</div>
+						<div>
+							<input id="i-agree" type="checkbox" checked>
+							<label for="i-agree">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+						</div>
+					</form>
+				</div>
+				<div class="share">
+					<h5>Поделитесь ссылкой со своими друзьями:</h5>
+					<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+					<script src="https://yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus" data-counter=""></div>
+				</div>
+			</div>
+		</main>
+		<div class="footer">
+			<nav>
+				<ul class="nav nav-justified menu second">
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico05">&nbsp;</span>
+							</span>
+							<span>Экскурсии <br>на автобусе</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico06">&nbsp;</span>
+							</span>
+							<span>Экскурсии для школьников</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico07">&nbsp;</span>
+							</span>
+							<span>Ночные экскурсии</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico08">&nbsp;</span>
+							</span>
+							<span>Пешеходные экскурсии</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico09">&nbsp;</span>
+							</span>
+							<span>Поющий автобус</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>
+								<span class="ico10">&nbsp;</span>
+							</span> 
+							<span>Экскурсии <br>на теплоходе</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="upper clearfix">
+				<div class="logo">
+					<a href="/"><img src="img/logo.png" alt=""></a>
+				</div>
+				<div class="phones">
+					<div>
+						<a class="phone" href="tel:+74957909089">
+							<span class="prefix">+7 (495) </span>
+							<span class="number">790-90-89</span>
+						</a>
+					</div>
+					<div>
+						<a class="phone" href="tel:+74957992977">
+							<span class="prefix">+7 (495) </span>
+							<span class="number">799-29-77</span>
+						</a>
+					</div>
+				</div>
+				<div class="btns">
+					<div>
+						<a class="ticket" href="#">
+							<span>
+								<span class="ico01">&nbsp;</span>
+								Электронный <br>билет
+							</span>
+						</a>
+					</div>
+					<div>
+						<a class="program" href="#">
+							<span>
+								Наши программы <br> в Петербурге
+								<span class="ico02">&nbsp;</span>
+								<span class="triangle">&nbsp;</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="textBottom text-center">
+				2009-2018 © Огни Столицы - автобусные и пешеходные экскурсии по Москве <br>г. Москва, ул. Арбат, 54/2с1, 2 этаж, офис 221.
+			</div>
+		</div>
+	</div>
+<!--noindex-->
+	<div id="callback" class="modal fade">
+	  <div class="modal-dialog modal-md">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	        <h3 class="modal-title">Обратный звонок</h3>
+	      	<form>
+	      		<div class="row">
+	      			<div class="col-md-12">
+	      				<div class="form-group">
+			      			<label>Представьтесь, пожалуйста:</label>
+			      			<input type="text" name="name" class="form-control" value="">
+			      		</div>
+	      			</div>
+	      		</div>
+	      		<div class="row">
+	      			<div class="col-md-12">
+	      				<div class="form-group">
+			      			<label>Ваш e-mail:</label>
+			      			<input type="text" name="email" class="form-control" value="">
+			      		</div>
+	      			</div>
+	      			<div class="col-md-12">
+	      				<div class="form-group">
+			      			<label>Телефон для связи:</label>
+			      			<input type="text" name="phone" class="form-control" value="">
+			      		</div>
+	      			</div>
+	      		</div>
+	      		<div class="form-group">
+	      			<label>Комментарий:</label>
+	      			<textarea name="comment" class="form-control" rows="6"></textarea>
+	      		</div>
+	      		<div class="form-group">
+						<input id="i-agree" class="dark" type="checkbox" checked="">
+						<label for="i-agree">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+	      		</div>
+	      		<button type="submit" class="btn btn-red btn-medium">Отправить</button>
+	      	</form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<!--/noindex-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<link href="css/jquery.fancybox.min.css" rel="stylesheet"/>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
