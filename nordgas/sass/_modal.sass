@@ -1,0 +1,66 @@
+.modal-active
+	overflow: hidden
+.overlay
+	width: 100%
+	min-height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	padding: 40px
+	position: fixed
+	z-index: 1000000
+	top: 0
+	left: 0
+	background: rgba(black, 0.75)
+	opacity: 0
+	pointer-events: none
+	transition: 0.35s ease-in-out
+	max-height: 100vh
+	overflow-y: auto
+	&.open
+		opacity: 1
+		pointer-events: inherit
+	.modal
+		background: white
+		position: relative
+		padding: 50px 59px
+		border: 1px solid $blue
+		opacity: 0
+		margin-top: -25px
+		pointer-events: none
+		transition: 0.35s ease-in-out
+		max-height: 100vh
+		overflow-y: auto
+		&.open
+			opacity: 1
+			margin-top: 0
+			pointer-events: inherit
+			.content
+				transform: translate(0, -0px)
+				opacity: 1
+		.content
+			transform: translate(0, -10px)
+			opacity: 0
+			transition: .35s ease-in-out
+		.title
+			margin-top: 0
+	.close-modal
+		position: absolute
+		right: 2px
+		top: 2px
+		width: 33px
+		height: 33px
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAABIUlEQVRYR+2YTQqCUBSFP8nAYTvRBTSwJVTDBkVU0KA1RGsoqEENGjSsltCkBehuggrjiUJEPzd7aILOlMP1e+ee+/wxKm6ncrqWbTI6rNLZN6xqzw1gb4CfNkcAtgH1EAIYn47LWtoQVrV3ACYFROFEnL3Cidw7sQO2wEa4n7SAJtB4pU+SiSEwBdoCEAWwBkbAXCeEqiUBEQGoYkmciBf0DkQM8CvEK0e+AtAB8Qiizj9m4DEbv7TjvtYAmEUXVJtWwskJZbogusAiunE/ckPMoQPiPqCZtOPZhKQazMxHNPPNSgIQh1LUmiTB/IsHmHj0pMIkTkhri3UFRO5f78S9lgr/LxPRV7knXYEuXQBO+FUe/p+4mI6uwt/WscyLdwPux+66bWKL8gAAAABJRU5ErkJggg==')
+		cursor: pointer
+.modal-heading
+	color: $blue
+	font-size: rem(36)
+	line-height: 24px
+	letter-spacing: 1.8px
+.modal-header
+	color: $blue
+	font-size: rem(14)
+	font-weight: 300
+	line-height: 18px
+	letter-spacing: 0.7px
