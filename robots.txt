@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /
-Disallow: /moscowturizm
+Disallow: *
 
-Host: naez.github.io/
+Host: naez.github.io
