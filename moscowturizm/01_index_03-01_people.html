@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoscowTurizm</title>
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+  <link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <a href="#callback" title="Если вы не смогли нам дозвонились, то оставьте заявку" class="callback" data-toggle="modal"></a>
+  <div class="container">
+    <div class="header">
+      <div class="upper clearfix">
+        <div class="logo">
+          <a href="/"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="phones">
+          <div>
+            <a class="phone" href="tel:+74957909089">
+              <span class="prefix">+7 (495) </span>
+              <span class="number">790-90-89</span>
+            </a>
+          </div>
+          <div>
+            <a class="phone" href="tel:+74957992977">
+              <span class="prefix">+7 (495) </span>
+              <span class="number">799-29-77</span>
+            </a>
+          </div>
+        </div>
+        <div class="btns">
+          <div>
+            <a class="ticket" href="#">
+              <span>
+                <span class="ico01">&nbsp;</span>
+                Электронный <br>билет
+              </span>
+            </a>
+          </div>
+          <div>
+            <a class="program" href="#">
+              <span>
+                Наши программы <br> в Петербурге
+                <span class="ico02">&nbsp;</span>
+                <span class="triangle">&nbsp;</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bar">
+      <button type="button" id="showMenu">Меню</button>
+    </div>
+    <nav id="mainMenu">
+      <ul class="nav nav-justified menu">
+        <li><a href="/01_index_03-01_tablet.html"><span class="ico03">&nbsp;</span> <span>Афиша</span></a></li>
+        <li><a href="/01_index_03-01_people.html"><span>Команда</span></a></li>
+        <li><a href="/01_index_03-01_list_1.html"><span>Где купить</span></a></li>
+        <li><a href="/01_index_03-01_contact.html"><span>Контакты</span></a></li>
+        <li><a href="/01_index_03-01_page.html"><span>Отзывы</span></a></li>
+        <li><a href="/01_index_03-01_list_2.html"><span class="ico04">&nbsp;</span> <span>Скидки</span></a></li>
+      </ul>
+    </nav>
+    <div class="tx text-center">
+      <div class="specialBig"><img src="img/special.png" alt=""></div>
+    </div>
+    <nav id="secondMenu">
+      <ul class="nav nav-justified menu second">
+        <li>
+          <a href="#">
+            <span>
+              <span class="ico05">&nbsp;</span>
+            </span>
+            <span>Экскурсии <br>на автобусе</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              <span class="ico06">&nbsp;</span>
+            </span>
+            <span>Экскурсии для школьников</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <span>
+              <span class="ico07">&nbsp;</span>
+            </span>
+            <span>Ночные экскурсии</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              <span class="ico08">&nbsp;</span>
+            </span>
+            <span>Пешеходные экскурсии</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              <span class="ico09">&nbsp;</span>
+            </span>
+            <span>Поющий автобус</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>
+              <span class="ico10">&nbsp;</span>
+            </span>
+            <span>Экскурсии <br>на теплоходе</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="clearfix">
+      <div class="leftSide">
+        <div class="lmenu active">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico11">&nbsp;</span>
+              </span>
+              <span>Экскурсии <br>на автобусе</span>
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Популярные</a></li>
+            <li><a href="#">Исторические</a></li>
+            <li><a href="#">Интерактивные</a></li>
+            <li class="active"><a href="#">Музыкальные</a></li>
+            <li><a href="#">Религиозные</a></li>
+            <li><a href="#">Литературные</a></li>
+            <li><a href="#">Архитектурные</a></li>
+          </ul>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico12">&nbsp;</span>
+              </span>
+              <span>Экскурсии для школьников</span>
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Для младших классов</a></li>
+            <li><a href="#">Для старших классов</a></li>
+            <li><a href="#">На выпускной</a></li>
+            <li><a href="#">Театрализованные</a></li>
+            <li><a href="#">Обзорная</a></li>
+            <li><a href="#">Исторические</a></li>
+            <li><a href="#">Литературные</a></li>
+            <li><a href="#">День рождения</a></li>
+          </ul>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico13">&nbsp;</span>
+              </span>
+              <span>Ночные экскурсии</span>
+            </a>
+          </div>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico14">&nbsp;</span>
+              </span>
+              <span>Пешеходные экскурсии</span>
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Популярные</a></li>
+            <li><a href="#">Обзорная</a></li>
+            <li><a href="#">Исторические</a></li>
+            <li><a href="#">Литературные</a></li>
+            <li><a href="#">Архитектурные</a></li>
+            <li><a href="#">Интерактивные</a></li>
+            <li><a href="#">Для младших классов</a></li>
+          </ul>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico15">&nbsp;</span>
+              </span>
+              <span>Поющий автобус</span>
+            </a>
+          </div>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico16">&nbsp;</span>
+              </span>
+              <span>Экскурсии <br>на теплоходе</span>
+            </a>
+          </div>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico17">&nbsp;</span>
+              </span>
+              <span>Экскурсии по Подмосковью</span>
+            </a>
+          </div>
+        </div>
+        <div class="lmenu">
+          <div class="title">
+            <a href="#">
+              <span>
+                <span class="ico18">&nbsp;</span>
+              </span>
+              <span>Наши концерты</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="rightSide">
+        <ol class="breadcrumb">
+          <li><a href="#"><span class="ico51">&nbsp;</span></a></li>
+          <li><a href="#">Экскурсии</a></li>
+          <li class="active">Экскурсии на автобусе</li>
+        </ol>
+        <h1>Наша команда</h1>
+        <div class="catalog">
+          <div class="card">
+            <div class="media">
+              <div class="media-left">
+                <div class="people-picture">
+                  <img src="img/card/people01.jpg" alt="">
+                </div>
+              </div>
+              <div class="media-body">
+                <div class="body">
+                  <h4>Александра Ирбе</h4>
+                  <div class="description">
+                    Художественный руководитель проекта. Член Союза писателей России, поэт и режиссер.
+                  </div>
+                  <div class="second-description">
+                    Автор экскурсий <a href="#">Москва-территория призраков»</a>, <a href="#">«Геометрия Любви или Страсти Великих»</a>, автор идеи проектов <a href="#">«Поющий автобус»</a>, Цикла <a href="#">"Из жизни одного переулка"</a> и <a href="#">"Новогодняя ночь на улицах города"</a>
+                  </div>
+                  <div>
+                    <a class="read-more" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="media">
+              <div class="media-left">
+                <div class="people-picture">
+                  <img src="img/card/people02.jpg" alt="">
+                </div>
+              </div>
+              <div class="media-body">
+                <div class="body">
+                  <h4>Михаил Федоров</h4>
+                  <div class="description">
+                    Ведущий экскурсовод, профессиональный историк и архивист.
+                  </div>
+                  <div class="second-description">
+                    Автор экскурсий <a href="#">"Великолепная Тверская"</a>, <a href="#">"Масоны и масонство. Три века в Москве"</a>, <a href="#">"Древнейшие монастыри Москвы"</a>, <a href="#">"Тверской бульвар. История и тайны"</a>, <a href="#">"Легенды сталинских высоток"</a>, <a href="#">"СССР. Страна, которую мы потеряли"</a>, <a href="#">"Великие авантюристы Москвы"</a>, <a href="#">"Век золотой Екатерины"</a>, <a href="#">"Серпухов. К монастырям земли русской"</a> и многих, многих еще...
+                  </div>
+                  <div>
+                    <a class="read-more" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="media">
+              <div class="media-left">
+                <div class="people-picture">
+                  <img src="img/card/people03.jpg" alt="">
+                </div>
+              </div>
+              <div class="media-body">
+                <div class="body">
+                  <h4>Видгоф Леонид Михайлович</h4>
+                  <div class="description">
+                    Филолог, экскурсовод, писатель.
+                  </div>
+                  <div class="second-description">
+                    Автор экскурсий: <a href="#">"М. Булгаков в Москве"</a>,  <a href="#">"Мандельштам в Москве"</a>, <a href="#">"Мураново"</a>, <a href="#">"Москва - город разных религий"</a>, <a href="#">"Из уголовного прошлого Москвы"</a>, <a href="#">"Гоголь в Москве"</a>, <a href="#">"По Ивановской горке"</a> и очень многих других!.
+                  </div>
+                  <div>
+                    <a class="read-more" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="media">
+              <div class="media-left">
+                <div class="people-picture">
+                  <img src="img/card/people04.jpg" alt="">
+                </div>
+              </div>
+              <div class="media-body">
+                <div class="body">
+                  <h4>Вячеслав Терехов</h4>
+                  <div class="description">
+                    Экскурсовод, религиовед, преподаватель ВУЗа.
+                  </div>
+                  <div class="second-description">
+                    Автор экскурсий <a href="#">"Религии мира в Москве"</a>, <a href="#">"Москва старообрядческая"</a>, <a href="#">"Тайны и легенды Немецкой слободы"</a>, <a href="#">"Тайный общества"</a> и других
+                  </div>
+                  <div>
+                    <a class="read-more" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="media">
+              <div class="media-left">
+                <div class="people-picture">
+                  <img src="img/card/people05.jpg" alt="">
+                </div>
+              </div>
+              <div class="media-body">
+                <div class="body">
+                  <h4>Дмитрий Смирнов</h4>
+                  <div class="description">
+                    Актер, певец, экскурсовод.
+                  </div>
+                  <div class="second-description">
+                    Ведущий программ <a href="#">«Поющий автобус»</a>, <a href="#">"Москва-территория призраков"</a>, <a href="#">"Геометрия Любви или Страсти Великих"</a>, всех новогодних и праздничных экскурсий. Автор детских театрализованных экскурсий <a href="#">"По следам московских привидений"</a>, <a href="#">"Вокруг стен Древнего города"</a> и <a href="#">"Кино на ладонях московских улиц"</a>. Соведущий и соавтор экскурсий <a href="#">"Новогодние чудеса в Москве"</a> и <a href="#">"Путешествие в Город Природы"</a>.
+                  </div>
+                  <div>
+                    <a class="read-more" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="footer">
+      <nav>
+        <ul class="nav nav-justified menu second">
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico05">&nbsp;</span>
+              </span>
+              <span>Экскурсии <br>на автобусе</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico06">&nbsp;</span>
+              </span>
+              <span>Экскурсии для школьников</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico07">&nbsp;</span>
+              </span>
+              <span>Ночные экскурсии</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico08">&nbsp;</span>
+              </span>
+              <span>Пешеходные экскурсии</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico09">&nbsp;</span>
+              </span>
+              <span>Поющий автобус</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <span class="ico10">&nbsp;</span>
+              </span>
+              <span>Экскурсии <br>на теплоходе</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="upper clearfix">
+        <div class="logo">
+          <a href="/"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="phones">
+          <div>
+            <a class="phone" href="tel:+74957909089">
+              <span class="prefix">+7 (495) </span>
+              <span class="number">790-90-89</span>
+            </a>
+          </div>
+          <div>
+            <a class="phone" href="tel:+74957992977">
+              <span class="prefix">+7 (495) </span>
+              <span class="number">799-29-77</span>
+            </a>
+          </div>
+        </div>
+        <div class="btns">
+          <div>
+            <a class="ticket" href="#">
+              <span>
+                <span class="ico01">&nbsp;</span>
+                Электронный <br>билет
+              </span>
+            </a>
+          </div>
+          <div>
+            <a class="program" href="#">
+              <span>
+                Наши программы <br> в Петербурге
+                <span class="ico02">&nbsp;</span>
+                <span class="triangle">&nbsp;</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="textBottom text-center">
+        2009-2018 © Огни Столицы - автобусные и пешеходные экскурсии по Москве <br>г. Москва, ул. Арбат, 54/2с1, 2 этаж, офис 221.
+      </div>
+    </div>
+  </div>
+<!--noindex-->
+  <div id="callback" class="modal fade">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 class="modal-title">Обратный звонок</h3>
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Представьтесь, пожалуйста:</label>
+                  <input type="text" name="name" class="form-control" value="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Ваш e-mail:</label>
+                  <input type="text" name="email" class="form-control" value="">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Телефон для связи:</label>
+                  <input type="text" name="phone" class="form-control" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Комментарий:</label>
+              <textarea name="comment" class="form-control" rows="6"></textarea>
+            </div>
+            <div class="form-group">
+            <input id="i-agree" class="dark" type="checkbox" checked="">
+            <label for="i-agree">Я согласен с <a href="#">политикой конфиденциальности</a></label>
+            </div>
+            <button type="submit" class="btn btn-red btn-medium">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--/noindex-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet"/>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
