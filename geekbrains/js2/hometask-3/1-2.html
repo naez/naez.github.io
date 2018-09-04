@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pavel Khalaimov hometask</title>
+  <title>Pavel Khalaimov hometask 1-2</title>
 </head>
 <body>
-
 <div class="container">
   <h1>BRAVE NEW WORLD</h1>
   <h2>Chapter One</h2>
@@ -48,19 +47,15 @@
     <p>Meanwhile, it was a privilege. Straight from the horse's mouth into the
     notebook. The boys scribbled like mad.</p>
   </div>
-  <button class="btn btn--medium" type="button" id="quotesToDouble">Change quotes to double</button>
+  <button class="btn" type="button" id="quotesToDouble">Change quotes to double</button>
 </div>
 
 <script>
-
   var text = changeQuotes.innerHTML;
   quotesToDouble.onclick = function () {
     text1 = text.replace(/(\s|>)'|'(<|\s)/g, '$1"$2');
     changeQuotes.innerHTML = text1.replace(/'/g, '<span class="quote">\'</span>');
   }
-
-
-
 </script>
 <link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&amp;subset=cyrillic" rel="stylesheet">
