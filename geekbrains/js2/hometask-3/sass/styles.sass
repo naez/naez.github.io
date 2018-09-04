@@ -1,0 +1,40 @@
+@import 'normalize'
+
+\:root
+  --btn-color: #95d44b
+  --red: red
+  --bg: #595999
+
+html
+  font-family: 'Roboto', sans-serif
+  font-size: 18px
+  line-height: 1.4
+
+body
+  display: flex
+  align-self: 100%
+  background: var(--bg)
+
+.container
+  max-width: 960px
+  margin: 0 auto
+  padding: 0 30px
+  background: #fff
+  min-height: 100vh
+
+.btn
+  background: var(--btn-color)
+  font-size: 22px
+  font-weight: 700
+  border: 0
+  padding: 10px 30px
+  cursor: pointer
+  outline: none
+  &:hover
+    --btn-color: #87c043
+  &--medium
+
+
+.quote
+  font-weight: 900
+  color: var(--red)
