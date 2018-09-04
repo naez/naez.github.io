@@ -13,7 +13,7 @@ gulp.task("sass", function() {
 
 // Задача слежения за измененными файлами
 gulp.task("watch", function() {
-    gulp.watch(["dist/sass/**/*.sass", 'dist/sass/**/*.scss'], ["sass"]);
+    gulp.watch([dist+"sass/**/*.sass", dist+'sass/**/*.scss'], ["sass"]);
 });
 
 // Запуск тасков по умолчанию

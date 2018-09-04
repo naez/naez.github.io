@@ -1,3 +1,6 @@
+*, :before, :after {
+  box-sizing: border-box; }
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; }
@@ -170,7 +173,7 @@ body {
   background: var(--bg); }
 
 .container {
-  max-width: 960px;
+  width: 980px;
   margin: 0 auto;
   padding: 0 30px;
   background: #fff;
@@ -190,3 +193,27 @@ body {
 .quote {
   font-weight: 900;
   color: var(--red); }
+
+.form-group {
+  margin-bottom: 15px; }
+
+label {
+  display: block;
+  margin-bottom: 5px; }
+
+.form-control {
+  border: 1px solid #ccc;
+  padding: 10px 15px; }
+
+.error {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1px var(--red) inset; }
+
+input.form-control {
+  width: 300px;
+  height: 53px; }
+
+textarea.form-control {
+  width: 600px;
+  height: 200px;
+  max-width: 100%; }
