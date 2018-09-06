@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pavel Khalaimov hometask 1-2</title>
+  <title>Lesson 3 - Pavel Khalaimov - Hometask 1-2</title>
 </head>
 <body>
 <div class="container">
@@ -50,11 +50,13 @@
   <button class="btn" type="button" id="quotesToDouble">Change quotes to double</button>
 </div>
 
+
+
 <script>
   var text = changeQuotes.innerHTML;
   quotesToDouble.onclick = function () {
     text1 = text.replace(/(\s|>)'|'(<|\s)/g, '$1"$2');
-    changeQuotes.innerHTML = text1.replace(/'/g, '<span class="quote">\'</span>');
+    changeQuotes.innerHTML = text1.replace(/'/g, '<span class="red bold">\'</span>');
   }
 </script>
 <link rel="stylesheet" href="css/styles.css">
