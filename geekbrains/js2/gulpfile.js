@@ -1,4 +1,4 @@
-var dist = 'hometask-3/';
+var dist = 'hometask-6/';
 // Подключаем Gulp
 var gulp = require("gulp");
 // Подключаем плагины Gulp
