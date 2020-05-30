@@ -1,0 +1,647 @@
+body
+  min-height: 100%
+  min-width: 320px
+
+
+
+.wrapper
+  display: grid
+  min-height: 100vh
+  grid-template-columns: repeat(32, 1fr)
+  grid-template-rows: 95px auto 330px
+  @media (min-width: $desktopWidth)
+    grid-template-rows: 120px auto 197px
+  @media (min-width: $phoneWidth)
+    grid-template-rows: 95px auto 197px
+  +iefix
+    display: flex
+    flex-direction: column
+
+
+
+.burger
+  width: 36px
+  height: 28px
+  display: flex
+  cursor: pointer
+  flex-direction: column
+  justify-content: space-between
+  background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMjEyMzUzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAyNCI+PHJlY3Qgd2lkdGg9IjM2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz48cmVjdCB5PSIxMSIgd2lkdGg9IjM2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz48cmVjdCB5PSIyMSIgd2lkdGg9IjM2IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiLz48L3N2Zz4=') center/36px no-repeat
+  &--active
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0iIzIxMjM1MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB5PSIyNS42NjczIiB3aWR0aD0iMzYiIGhlaWdodD0iMyIgcng9IjEuNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDAgMjUuNjY3MykiLz48cmVjdCB3aWR0aD0iMzYiIGhlaWdodD0iMyIgcng9IjEuNSIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzA3MTA3IC0wLjcwNzEwNyAtMC43MDcxMDcgMC43MDcxMDcgMjcuNTc3MSAyNS42NjczKSIvPjwvc3ZnPgo=') 100% center/28px no-repeat
+
++iefix
+  .form
+    min-width: 100%
+    @media (min-width: $tableWidth)
+      min-width: 420px !important
+  .logo
+    margin-right: 6vw
+    @media (min-width: $smDesktopWidth)
+      margin-right: 12vw !important
+    flex-shrink: 0
+  .header .btn
+    min-width: 180px
+  .header
+    &__btns
+      margin-left: auto
+
+  .header,
+  .footer
+    width: 100%
+    align-items: center
+    display: flex
+
+  .footer
+    &__form
+      margin-left: auto
+    @media (max-width: $tableWidth)
+      &__container
+        flex-wrap: wrap !important
+      &__logo
+      &__menu
+        max-width: 100px !important
+      &__form
+        width: 100% !important
+        margin-top: 30px !important
+
+  .content-wrapper,
+  .header__container,
+  .footer__container
+    max-width: 1350px
+    width: 100%
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+  .slider-wrapper
+    margin-left: 3vw
+    margin-right: 3vw
+
+.header
+  grid-column: 1/-1
+  @media (min-width: $lgDesktopWidth)
+    grid-column: 6/-6
+  @media (min-width: $smDesktopWidth)
+    grid-column: 2/-2
+
+.footer__container
+  grid-column: 2/-2
+  @media (min-width: $lgDesktopWidth)
+    grid-column: 6/-6
+
+
+.show-mobile
+  display: none !important
+@media (max-width: #{$smDesktopWidth - 1px})
+  .show-mobile
+    display: block !important
+  .hide-mobile
+    display: none !important
+
+
+
+.footer
+  grid-column: 1/-1
+
+
+.logo
+  width: 49px
+  height: 35px
+  display: block
+  &__icon
+    display: block
+
+.header
+  padding: 25px 0
+  top: 0
+  position: relative
+  @media (min-width: $smDesktopWidth)
+    padding: 30px 0
+  @media (max-width: #{$smDesktopWidth - 1px})
+    display: grid
+    grid-template-columns: inherit
+  &__container
+    display: grid
+    grid-column: 3/-3
+    grid-template-columns: repeat(28, 1fr)
+    align-items: center
+    +iefix
+      display: flex
+      // justify-content: space-between
+    @media (min-width: $lgDesktopWidth)
+      grid-template-columns: repeat(22, 1fr)
+      
+    @media (min-width: $phoneWidth)
+      grid-template-columns: repeat(30, 1fr)
+      grid-column: 2/-2
+
+  &__logo
+    grid-column: span 3
+  &__menu
+    @media (min-width: $smDesktopWidth)
+      grid-column: 4/span 15
+  &__btns
+    display: flex
+    flex-direction: column
+    grid-column: span 4/-1
+    @media (min-width: $lgDesktopWidth)
+      grid-column: span 3/-1
+    @media (max-width: #{$smDesktopWidth - 1px})
+      align-items: flex-end
+
+ 
+
+
+
+.footer
+  background-color: $primary-color
+  padding: 50px 0 60px
+  @media (min-width: $smDesktopWidth)
+    min-height: 197px
+    padding: 30px 0
+    align-items: center
+
+  display: grid
+  grid-template-columns: inherit
+  &__container
+    grid-column: 3/-3
+    display: grid
+    grid-template-columns: repeat(28, 1fr)
+    +iefix
+      display: flex
+      justify-content: space-between
+    @media (min-width: $lgDesktopWidth)
+      grid-template-columns: repeat(22, 1fr)
+    @media (min-width: $phoneWidth)
+      grid-template-columns: repeat(30, 1fr)
+      grid-column: 2/-2
+      align-items: center
+     
+  
+  &__logo
+    grid-column: span 3
+    @media (min-width: $desktopWidth)
+      grid-column: span 2
+    
+  &__menu
+    grid-column: span 14 / -1
+    @media (min-width: $smDesktopWidth)
+      grid-column: 5 / span 8
+    @media (min-width: $phoneWidth)
+      grid-column: 5 / span 6
+
+    @media (max-width: #{$phoneWidth - 1px})
+      justify-self: right
+      display: flex
+      flex-direction: column
+
+  &__form
+    grid-column: 1 / -1
+    margin-top: 35px
+    @media (min-width: $desktopWidth)
+      grid-column: span 10 / -1
+    @media (min-width: 790px)
+      grid-column: span 14 / -1
+    @media (min-width: $phoneWidth)
+      grid-column: span 18 / -1
+      margin-top: 0
+    
+
+
+.content-wrapper
+  grid-column: 1/-1
+  margin-top: 40px
+  margin-bottom: 92px
+  @media (min-width: $lgDesktopWidth)
+    grid-column: 7/-7
+  @media (min-width: $smDesktopWidth)
+    margin-top: 90px
+    margin-bottom: 150px
+    grid-column: 5/-5
+  @media (min-width: 880px)
+    grid-column: 6/-6
+  @media (min-width: $phoneWidth)
+    grid-column: 3/-3
+  
+  
+
+.btn
+  $height: 48px
+  height: $height
+  border: 0
+  border-radius: ($height/2)
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 0 28px
+  font-size: 16px
+  background-color: $light-color
+  color: #fff
+  +transition(background-color)
+  will-change: background-color
+  cursor: pointer
+  &:hover
+    background-color: rgba($light-color, .7)
+  &--large
+    $height: 60px
+    height: $height
+    border-radius: ($height/2)
+    padding: 0 28px
+    font-size: 18px
+  &--warning
+    background-color: $warning-color
+    &:hover
+      background-color: $warning-color-light
+    
+  &--primary
+    background-color: $primary-color
+    
+    &:hover
+      background-color: $primary-color-light
+
+.input
+  background-color: #fff
+  border-radius: 4px
+  height: 48px
+  padding: 10px 16px
+  border: 0
+  &::placeholder
+    color: $light-color
+    +transition
+  &:focus
+    &::placeholder
+      color: transparent
+
+
+.form
+  @media (max-width: #{$phoneWidth - 1px})
+    flex-wrap: wrap
+  display: flex
+  justify-content: center
+  &__item
+    &:nth-child(1)
+      flex-grow: 1
+      @media (max-width: #{$phoneWidth - 1px})
+        width: 100%
+        margin-bottom: 22px
+    &:nth-child(2)
+      @media (min-width: $phoneWidth)
+        margin-left: 5.5%
+
+
+.menu
+  $this: &
+  display: flex
+  font-weight: 500
+  color: $dark-color
+  font-size: 18px
+  @media (max-width: #{$smDesktopWidth - 1px})
+    flex-wrap: wrap
+  &__btn
+    margin-left: auto
+    margin-right: auto
+    max-width: 180px
+    display: flex
+  &__item
+    @media (max-width: #{$smDesktopWidth - 1px})
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 23px
+
+    &--mobile-el
+      padding: 44px 0
+      
+    @media (min-width: $smDesktopWidth)
+      &:not(:first-child)
+        margin-left: 50px
+      &:hover
+        color: $primary-color
+        .menu-dropdown
+          opacity: 1
+          margin-top: 0
+          visibility: visible
+
+        #{$this}
+          &__link-caret
+            transform: rotate(180deg)
+
+    
+  &__link
+    display: flex
+    cursor: pointer 
+    align-items: center
+    color: currentColor
+    &--active
+      #{$this}
+        &__link-caret
+          transform: rotate(0)
+      
+  &__link-caret
+    fill: currentColor
+    width: 18px
+    height: 11px
+    margin-left: 5px
+    @media (max-width: #{$smDesktopWidth - 1px})
+      transform: rotate(-90deg)
+    @media (min-width: $smDesktopWidth)
+      width: 10px
+      height: 7px
+    
+
+  &--theme-white
+    @media (min-width: 0)
+      color: #fff
+      #{$this}
+        &__item:hover,
+        &__link:hover
+          color: inherit
+  &--font-small
+    font-size: 16px
+    font-weight: 400
+
+.menu-wrapper
+  @media (max-width: #{$smDesktopWidth - 1px})
+    display: none
+    position: absolute
+    z-index: 10
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15)
+    left: 0
+    right: 0
+    top: 100%
+    grid-column: auto
+    &--visible
+      display: block
+    .menu
+      color: $dark-color
+      font-size: 27px
+      flex-wrap: wrap
+      &__item
+        width: 100%
+        background-color: #fff
+        border-top: 1px solid #D6B9FF
+        margin-bottom: 0
+      &__link
+        height: 74px
+        align-items: center
+        justify-content: space-between
+        padding: 0 3vw
+  @media (max-width: #{$phoneWidth - 1px})
+    .menu__link
+      padding: 0 6vw
+
+
+.menu-dropdown
+  background-color: #F9F4FF
+  border-top: inherit
+
+  padding: 25px 6vw
+  font-size: 25px
+  line-height: 1
+  font-weight: 400
+  $beforeArrowSize: 18px
+  display: none
+  &--visible
+    display: block
+  @media (min-width: $smDesktopWidth)
+    font-size: 16px
+    padding: 18px 25px
+    opacity: 0
+    margin-top: -10px
+    visibility: hidden
+    display: block
+    will-change: opacity, margin-top, visibility
+    +transition
+
+    position: absolute
+    background-color: #fff
+    border: 1px solid $primary-color
+    border-radius: 10px
+    box-shadow: 0px 4px 0px #E2CEFE
+    transform: translate(-23px, $beforeArrowSize)
+
+    &::before,
+    &::after
+      content: ''
+      height: $beforeArrowSize
+    &::before
+      width: $beforeArrowSize
+      border-top: 1px solid $primary-color
+      border-right: 1px solid $primary-color
+      transform: rotate(-45deg)
+      background-color: inherit
+      top: 0
+      top: ($beforeArrowSize / -1.8)
+      left: 60px
+      position: absolute
+    &::after
+      position: absolute
+      z-index: -1
+      left: 0
+      right: 0
+      top: -$beforeArrowSize
+  &__item
+    &:not(:last-child)
+      margin-bottom: 1.76em
+      @media (min-width: $smDesktopWidth)
+        margin-bottom: 1.2em
+  &__link
+    color: $dark-color
+    @media (min-width: $smDesktopWidth)
+      color: $default-color
+      &:hover
+        color: $primary-color
+
+.main-section
+  text-align: center
+  margin-bottom: 60px
+  padding: 0 9vw
+  @media (min-width: $smPhoneWidth)
+    padding: 0 3vw
+  &__description
+    font-size: 23px
+    line-height: 1.6
+    max-width: 650px
+    margin-left: auto
+    margin-right: auto
+
+
+  &__h1
+    font-size: 40px
+    line-height: 1.3
+    font-weight: 700
+    margin-bottom: (36/40 * 1em)
+  &__h2
+    font-size: 32px
+    line-height: 1.3
+    font-weight: 700
+    margin-bottom: (28/32 * 1em)
+  &__h3
+    font-size: 28px
+    line-height: 1.3
+    font-weight: 700
+    margin-bottom: (24/28 * 1em)
+
+
+.slider-wrapper
+  background-color: #FFC84D
+  display: grid
+  grid-template-columns: repeat(32, 1fr)
+  
+  @media (min-width: $lgDesktopWidth)
+    grid-template-columns: repeat(20, 1fr)
+    
+  @media (min-width: $smDesktopWidth)
+    grid-template-columns: repeat(24, 1fr)
+
+  @media (min-width: $tableWidth)
+    grid-template-columns: repeat(22, 1fr)
+    
+  @media (min-width: $phoneWidth)
+    grid-template-columns: repeat(28, 1fr)
+    border-radius: 50px
+
+  
+
+  
+.slider-container
+  grid-column: 1/-1
+  padding: 12vw 9vw 30vw
+  overflow: hidden
+  position: relative
+  @media (min-width: $lgDesktopWidth)
+    grid-template-columns: repeat(18, 1fr)
+  @media (min-width: $desktopWidth)
+    grid-column: 2/-2
+    grid-template-columns: repeat(22, 1fr)
+  @media (min-width: $smDesktopWidth)
+    grid-template-columns: repeat(20, 1fr)
+  @media (min-width: $tableWidth)
+    grid-template-columns: repeat(18, 1fr)
+  @media (min-width: $phoneWidth)
+    grid-template-columns: repeat(24, 1fr)
+    padding: 97px 0 130px
+    display: grid
+    grid-column: 3/-3
+  @media (min-width: $smPhoneWidth)
+    padding-top: 10vw
+    padding-bottom: 24vw
+
+
+  
+
+
+
+
+
+.swiper-pagination 
+  .swiper-pagination-bullet
+    width: 6px
+    height: 6px
+    &:not(:last-child)
+      margin-right: 17px
+    margin-left: 2px
+    background: #fff 
+    opacity: 1
+  .swiper-pagination-bullet-active
+    background: #F063B8
+    box-shadow: 0 0 0 2px #F063B8
+
+
+.features-slider
+  @media (min-width: $phoneWidth)
+    counter-reset: sliderCounter
+  grid-column: 1/-1
+  @media (min-width: $desktopWidth)
+    grid-column: 2/-2
+  @media (min-width: $phoneWidth)
+    grid-column: 3/-3
+
+
+  &__item
+    display: flex
+    flex-direction: column
+    padding: 16vw 9vw
+    @media (min-width: $smDesktopWidth)
+      max-width: unset
+    @media (min-width: $phoneWidth)
+      padding: 50px 60px 44px 114px
+
+    @media (min-width: $smPhoneWidth)
+      padding-top: 12vw
+      padding-bottom: 12vw
+      max-width: 390px
+
+    background-color: #FFF3D7
+    border-radius: 50px
+    @media (min-width: $phoneWidth)
+      counter-increment: sliderCounter
+    position: relative
+    box-shadow: 0px 10px 0px #F5BD3F
+    &::before
+      @media (min-width: $tableWidth)
+        font-size: 202px
+      @media (min-width: $phoneWidth)
+        content: counter(sliderCounter)
+        font-weight: 700
+        line-height: 1
+        color: $primary-color
+        position: absolute
+        font-size: 170px
+        left: -74px
+        top: 31px
+        width: 132px
+        text-align: center
+
+  &__item-type
+    position: absolute
+    left: 9vw
+    @media (min-width: $phoneWidth)
+      left: 114px
+
+    top: -6px
+
+    background: #F063B8
+    box-shadow: 0px 4px 0px #EFE3C5
+    border-radius: 0px 0px 4px 4px
+    text-transform: uppercase
+    color: #fff
+    font-size: 18px
+    line-height: 1
+    display: flex
+    height: 34px
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 0 15px
+
+
+  &__heading
+    font-size: 25px
+    font-weight: 400
+    line-height: 1.3
+    margin-bottom: (30/25 * 1em)
+
+  &__descr
+    flex-grow: 1
+    line-height: 1.65
+    margin-bottom: 30px
+
+
+.link
+  line-height: 1
+  display: flex
+  color: $dark-color
+  font-weight: 700
+  will-change: color
+  +transition(color)
+  &:hover
+    color: $primary-color
+  &::after
+    content: ''
+    width: 21px
+    height: 15px
+    margin-left: 24px
+    display: inline-block
+    background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMiAxNiI+PHBhdGggZD0iTTE1IDE1LjAwMDdsNi03LTYtN00yMSA4LjAwMDdIMSIgc3Ryb2tlPSIjOUM2OUUyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==') 0/cover

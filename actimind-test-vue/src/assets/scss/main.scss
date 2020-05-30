@@ -1,0 +1,49 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+
+html {
+  font-family: $main-font;
+  line-height: $main-line-height;
+  font-size: $main-font-size;
+  font-weight: $main-font-weight;
+  color: $main-font-color;
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+* { outline: none; }
+
+h1, h2, h3, h4, h5, h6 { 
+  color: $heading-color;
+  margin: 0; 
+}
+
+a { text-decoration: none; }
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 0.8em;
+  }
+}
+
+
+
+@import "_content";

@@ -1,0 +1,41 @@
+// Main color
+$default-color           : #4B5D68;
+$primary-color           : #9C69E2;
+
+$success-color           : #26de81;
+$danger-color            : #fc5c65;
+
+$warning-color           : #EEAA12;
+$light-color             : #A9A0B6;
+$dark-color              : #212353;
+
+$primary-color-light     : #B17FF4;
+$warning-color-light     : #fed330;
+
+
+
+// Font
+$main-font                : 'Roboto', sans-serif;
+$main-font-color          : $default-color;
+$heading-color            : $dark-color;
+
+// Size
+$main-font-size            : 16px;
+$main-font-weight          : 400;
+$main-line-height          : 1.4;
+
+
+
+$lgDesktopWidth         : 1681px;
+$desktopWidth           : 1281px;
+$smDesktopWidth         : 993px;
+$tableWidth             : 769px;
+$phoneWidth             : 620px;
+$smPhoneWidth           : 381px;
+
+
+
+
+// Transitions
+$transition-duration        : 200ms;
+$transition-timing-function : ease-in;
