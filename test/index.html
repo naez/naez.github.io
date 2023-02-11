@@ -8,50 +8,30 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- <div class="box">
-    <div class="item item--1">123123123</div>
-    <div class="item item--2">sale sale</div>
-    <div class="item">sale sale sale</div>
-    <div class="item item--1">123123123</div>
-    <div class="item item--2">sale sale</div>
-    <div class="item">sale sale sale</div>
-  </div> -->
+<script>
 
+class Animal {
+  constructor(type) {
+    this.type = type
+  }
+}
+
+class Person extends Animal {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
   
+  print() {
+    return `${this.name} ${this.age}`
+  }
+}
+
+const alex = new Person('Alex', 20)
+
+console.log(alex.print());
 
 
-<section class="grid-row">
-  <article class="grid-row__item">
-    <h3 class="grid-row__title">Строим: </h3>
-    <ul class="list">
-      <li>Дороги</li>
-      <li>мосты</li>
-      <li>водопропускные сооружения</li>
-      <li>надземные пешеходные переходы</li>
-      <li>автономное освещение</li>
-      <li>светофорные объекты</li>
-      <li>барьерные ограждения</li>
-      <li>заборы от животных.</li>
-    </ul>
-  </article>
-  <article class="grid-row__item">
-    <h3 class="grid-row__title">Содержим: </h3>
-    <ul class="list">
-      <li>Мосты</li>
-      <li>искусственные сооружения</li>
-      <li>наружное и автономное освещение</li>
-      <li>светофорные объекты</li>
-      <li>системы АСУДД.</li>
-    </ul>
-  </article>
-  <article class="grid-row__item">
-    <h3 class="grid-row__title">Производим: </h3>
-    <ul class="list">
-      <li>Спиральновитые гофрированные металлические трубы (сгмт)</li>
-      <li>ламинация рулонной горячеоцинкованной стали</li>
-      <li>пешеходные ограждения. </li>
-    </ul>
-  </article>
-</section>
+</script>
 </body>
 </html>

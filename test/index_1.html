@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  function User(defaultName) {
+    let _name = defaultName
+    return {
+      getName() {
+        return _name
+      },
+      setName(n) {
+        _name = n
+      }
+    }
+  }
+  // const user = User('Peter')
+  // user.setName('coca')
+  // console.log(user.getName())
+
+  function Animal(type, defaultName = "") {
+    let _name = defaultName
+
+    
+    function rabbitRun() {
+      console.log(`${type} ${_name} runs with speed very fast ${this.speed}`)
+    }
+    
+    function animalRun() {
+      console.log(`${type} ${_name} runs with speed ${this.speed}`)
+    }
+    
+    return class AnimalClass {
+      speed = '20 km/h'
+
+      get name() {
+        return _name
+      }
+      set name(n) {
+        _name = n
+      }
+
+      run = type === 'rabbit' ? rabbitRun.bind(this) : animalRun.bind(this)
+    }
+  }
+
+  const rabbit = new (Animal('rabbit', 'roger'))()
+  const animal = new (Animal('cat', 'mr mews'))()
+
+  rabbit.run()
+  animal.run()
+
+
+</script>
+</body>
+</html>
