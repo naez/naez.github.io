@@ -1,0 +1,22 @@
+// docs
+
+// https://jsonplaceholder.typicode.com/
+/posts/:
+    get:
+        response:
+            200:
+                [{
+                    "userId": Number,
+                    "id": Number,
+                    "title": String,
+                    "body": String
+                }]
+    post:
+        response:
+            201:
+                [{
+                    "postId": Number,
+                    "id": Number,
+                    "title": String,
+                    "body": String
+                }]

@@ -1,0 +1,1117 @@
+@function em($pixels, $context: $font-base)
+	@return #{$pixels/$context}em
+
+@function rem($pixels, $context: $font-base)
+	@return #{$pixels/$context}rem
+
+
+@import 'core'
+@import 'icons'
+@import 'modal'
+
+
+
+/* styles.css */
+.modal-content
+.modal-body
+	max-width: 505px
+	margin: 0 auto
+	.form-group
+		margin-bottom: 35px
+label
+	color: #000
+	font-size: rem(18)
+	letter-spacing: 0.9px
+	margin-bottom: 6px
+	display: block
+.form-group
+	margin-bottom: 6px
+.form-control
+	outline: none
+	background: #fff
+	border: 1px solid #356ca9
+	height: 50px
+	padding: 10px
+	display: block
+	width: 100%
+	transition: box-shadow .25s ease-in-out
+	color: $blue
+	font-size: rem(18)
+	font-weight: 300
+	letter-spacing: 0.9px
+	&:focus
+		box-shadow: 0 0 5px 0 $blue
+textarea.form-control
+	height: auto
+	max-width: 100%
+	min-width: 100%
+.flex
+	display: flex
+	flex-wrap: nowrap
+	margin-left: -15px
+	margin-right: -15px
+	.item
+		padding-left: 15px
+		padding-right: 15px
+
+.btn
+	display: inline-block
+	padding: 10px 30px
+	text-align: center
+	background-color: $grey
+	color: #fff
+	font-size: em(18)
+	font-weight: 400
+	line-height: 24px
+	letter-spacing: 0.9px
+	text-decoration: none
+	border: 1px solid $blue
+	cursor: pointer
+	&.btn-blue
+		transition: background-color .3s ease-in-out
+		background-color: $blue
+		box-shadow: 3px 4px 17px 1px rgba(38, 86, 137, 0.45)
+		&:hover
+			background-color: $blue-dark
+	&.btn-white
+		transition: background-color .3s ease-in-out
+		background-color: #fff
+		color: $blue
+		&:hover
+			background-color: $blue-dark
+			color: #fff
+
+.navigation
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+.main-menu
+	display: table
+	width: 100%
+	margin-left: 30px
+	li
+		position: relative
+		display: table-cell
+		text-align: center
+		padding-left: 4px
+		&:first-child
+			padding-left: 0
+		a
+			position: relative
+			white-space: pre
+			display: block
+			color: #fff
+			font-weight: 300
+			letter-spacing: 0.3px
+			text-decoration: none
+			padding: 6.5px 18px
+			border: 1px solid transparent
+			&::after
+				content: ''
+				position: absolute
+				left: 18px
+				right: 18px
+				bottom: -1px
+				border-bottom: 1px solid $blue-light
+			&:hover
+				color: $blue-light
+				border-color: $blue-light
+				&::after
+					border-color: transparent
+
+.basket-block
+	a
+		position: relative
+		display: block
+		color: #fff
+		text-decoration: none
+		font-size: em(18)
+		font-weight: 400
+		padding: 5.5px 0 7.5px
+		letter-spacing: 0.9px
+		&::after
+			content: ''
+			position: absolute
+			left: 4px
+			right: 0
+			bottom: 0
+			border-bottom: 1px solid $blue-light
+		&:hover
+			color: $blue-light
+			.st0
+				fill: $blue-light
+			&::after
+				border-color: transparent
+	svg
+		width: 21px
+		display: inline-block
+		vertical-align: top
+		margin-right: 11px
+	.st0
+		fill: #fff
+	.basket-quantity
+		position: absolute
+		top: -1px
+		left: 11px
+		font-size: 11px
+		color: #fff
+		line-height: 11px
+		padding: 2px 3px
+		letter-spacing: 0.55px
+		background-color: #336699
+
+.header
+	min-height: 869px
+	background-image: url('../img/header-inner-back.jpg')
+	background-repeat: no-repeat
+	background-position: 50% 0
+	position: relative
+	z-index: 21
+	&.header-index
+		background-image: url('../img/header-back.png')
+
+.header-upper
+	display: flex
+	align-items: center
+	margin-left: -15px
+	margin-right: -15px
+	position: relative
+	padding-top: 20px
+	padding-bottom: 17px
+	&::after
+		content: ''
+		border-bottom: 2px dotted #dddddd
+		opacity: .4
+		position: absolute
+		bottom: 0
+		left: 15px
+		right: 15px
+	.item
+		width: 33.3334%
+		padding-left: 15px
+		padding-right: 15px
+		&:nth-child(2)
+			text-align: center
+		&:last-child
+			text-align: right
+
+.header-center
+	display: flex
+	align-items: center
+	margin-left: -20px
+	margin-right: -20px
+	position: relative
+	padding-top: 20px
+	padding-bottom: 17px
+	justify-content: space-between
+	>div
+		padding-left: 20px
+		padding-right: 20px
+		&:nth-child(2)
+	    margin-left: auto
+  	  margin-right: 5px
+
+.links
+	display: inline-block
+	text-align: left
+	>div
+		margin-bottom: 14px
+		&:last-child
+			margin-bottom: 0
+	svg
+		width: 16px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 11px
+	.st0
+		fill: none
+		stroke: #fff
+		stroke-miterlimit: 10
+	a
+		color: #fff
+		font-size: em(16)
+		line-height: 20px
+		font-weight: 300
+		letter-spacing: 0.8px
+		text-decoration: none
+		span
+			display: inline-block
+			position: relative
+			&::after
+				content: ''
+				border-bottom: 1px dashed
+				position: absolute
+				left: 2px
+				right: 1px
+				bottom: 0
+		&:hover
+			color: $blue-light
+			.st0
+				stroke: $blue-light
+
+.search-block
+	position: relative
+	width: 260px
+	input
+		width: 100%
+		background: none
+		border: 0
+		color: #fff
+		height: 33px
+		border-bottom: 1px solid $blue-light
+		font-family: $font-Raleway
+		font-size: em(16)
+		font-weight: 300
+		letter-spacing: 0.8px
+		background: url('') 50% 100% no-repeat
+		padding-right: 25px
+		&::-webkit-input-placeholder
+			font-style: italic
+			color: #fff
+		&:-moz-placeholder
+			font-style: italic
+			color: #fff
+			opacity: 1
+		&::-moz-placeholder
+			font-style: italic
+			color: #fff
+			opacity: 1
+		&:-ms-input-placeholder
+			font-style: italic
+			color: #fff
+	button
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAAXNSR0IB2cksfwAAANJQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////hovIawAAAEZ0Uk5TAARvzf/ikiQx4+Tfax7+lg9naNRqKRxCvGOYl0H99MAa2Q26HwuFWwonk3Wkp2LJAcwlSKyfwcqUMH63xZpOixPmhO6BIDH1Cn8AAACbSURBVHicXczVEsJAEETRBW6w4O4EtwDB3eH/f4kImyoyD91TZ0UIIXz+ACjBkJATjkBUBWI/iCdImsepNGQcyZJzljwUrC5Sks/LVKyqUnN/rDesbKK50qJtZoeuKwo9M/sMJAxRrBqhShkzsVtn6sCMubMYC1rlpbZagy5vb7Bnu2Mv6XA8nS9XYajcxP/cHzw9pL14e+ij6l82WQs8CNBV6QAAAABJRU5ErkJggg==')
+		border: 0
+		width: 17px
+		height: 17px
+		margin: 0
+		position: absolute
+		right: 0
+		top: 6px
+		cursor: pointer
+
+.header-bottom
+	display: flex
+	margin-top: 27px
+	position: relative
+	*
+		color: #fff
+
+.navigation-left
+	margin-right: 144px
+	margin-top: -5px
+	padding: 40px 53px
+	width: 434px
+	height: 559px
+	background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDQzIDU3MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQzIDU3MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtvcGFjaXR5OjAuNjQ7fS5zdDF7ZmlsdGVyOnVybCgjcXg4bmIpO30uc3Qye29wYWNpdHk6MC40O2ZpbGw6IzAwMEIzNTt9LnN0M3tmaWxsOiMxNTM3NjE7fTwvc3R5bGU+PGZpbHRlciAgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIiBoZWlnaHQ9IjU5Ny4yIiBpZD0icXg4bmIiIHdpZHRoPSI0NjgiIHg9IjM0OSIgeT0iMTk3Ij48ZmVPZmZzZXQgIGR4PSIzIiBkeT0iNS4yIiBpbj0iU291cmNlR3JhcGhpYyIgcmVzdWx0PSJGZU9mZnNldDEwMjNPdXQiPjwvZmVPZmZzZXQ+PGZlR2F1c3NpYW5CbHVyICBpbj0iRmVPZmZzZXQxMDIzT3V0IiByZXN1bHQ9IkZlR2F1c3NpYW5CbHVyMTAyNE91dCIgc3RkRGV2aWF0aW9uPSIyLjggMi44Ij48L2ZlR2F1c3NpYW5CbHVyPjwvZmlsdGVyPjxnPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNTYgLTIwNikiIGNsYXNzPSJzdDAiPjxnIGNsYXNzPSJzdDEiPjxnPjxnIGlkPSJxeDhuYV80XyI+PHBhdGggY2xhc3M9InN0MiIgZD0iTTM1NiwyMDdoMzUxLjVjMCwwLDc4LjIsMjkzLDc3LjQsMjkyLjljMC4zLDAuNSwyLjEsMjY1LjEsMi4xLDI2NS4xSDM1NlYyMDd6Ii8+PC9nPjwvZz48L2c+PGc+PHBhdGggaWQ9InF4OG5hXzNfIiBjbGFzcz0ic3QzIiBkPSJNMzU2LDIwN2gzNTEuNWMwLDAsNzguMiwyOTMsNzcuNCwyOTIuOWMwLjMsMC41LDIuMSwyNjUuMSwyLjEsMjY1LjFIMzU2VjIwN3oiLz48L2c+PC9nPjwvZz48L3N2Zz4=') 0 0 no-repeat
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		z-index: 9
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		margin: 15px 26px 25px 15px
+		border: 2px dotted #e8e8e8
+		opacity: 0.64
+
+	h3
+		color: #fff
+		font-family: $font-Raleway
+		font-weight: 600
+		letter-spacing: 1.2px
+		margin-bottom: 25px
+
+.header-description
+	h1
+		font-family: $font-Raleway
+		font-size: em(40)
+		line-height: 46px
+		font-weight: 600
+		letter-spacing: 2px
+		margin-bottom: 20px
+	h2
+		font-family: $font-Raleway
+		font-size: em(30)
+		line-height: 36px
+		letter-spacing: 1.5px
+
+.menu-left
+	padding: 0
+	margin: 0
+	list-style: none
+	position: relative
+	z-index: 10
+	li
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+	a
+		font-size: em(16)
+		font-weight: 300
+		line-height: 25px
+		text-decoration: underline
+		letter-spacing: 0.8px
+		&:hover
+			color: $blue-light
+
+.index-section-1
+	margin-top: -43px
+	padding: 90px 0
+	position: relative
+	z-index: 20
+	height: 726px
+	background: url('../img/index-section-1.png') 50% 0 no-repeat
+	.flex
+		align-items: center
+		.item
+			margin-right: 24px
+
+.index-section-2
+		margin-top: -32px
+		padding: 70px 0
+		position: relative
+		z-index: 21
+		height: 699px
+		background: url('../img/index-section-2.png') 50% 0 no-repeat
+
+.index-section-3
+		margin-top: -60px
+		padding: 80px 0 60px
+		position: relative
+		z-index: 20
+		height: 912px
+		background: url('../img/index-section-3.png') 50% 0 no-repeat
+
+.index-section-title
+	color: #000
+	font-size: em(18)
+	font-weight: 500
+	line-height: 24px
+	letter-spacing: 0.9px
+	margin-bottom: 25px
+.index-section-text
+	line-height: 24px
+	margin-bottom: 30px
+
+.blue-shadow
+	box-shadow: 6px 10px 27px 2px rgba(38, 86, 137, 0.45)
+
+.blue-line-after
+	position: relative
+	padding-bottom: 30px
+	&::after
+		content: ''
+		border-bottom: 2px solid #356ca9
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 130px
+h1.blue-line-after
+	padding-bottom: 15px
+	margin-bottom: 40px
+
+.heading-big
+	font-size: em(48)
+	line-height: 1
+	font-weight: 400
+	letter-spacing: 2.4px
+	margin-bottom: 40px
+	margin-left: -2px
+	&.blue-line-after
+		padding-bottom: 15px
+		&::after
+			left: 4px
+
+.advantages
+	display: flex
+	height: 378px
+	.item
+		width: 25%
+		height: 100%
+	.advantage-quality
+		background-image: url('../img/advantages01.jpg')
+	.advantage-delivery
+		background-image: url('../img/advantages02.jpg')
+	.advantage-reliability
+		background-image: url('../img/advantages03.jpg')
+	.advantage-respect
+		background-image: url('../img/advantages04.jpg')
+	.advantage
+		text-align: center
+		height: inherit
+		background-color: $blue-dark
+		position: relative
+		padding: 20px 18px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 50%
+		&::before
+			content: ''
+			position: absolute
+			z-index: 9
+			border: 2px dotted #fff
+			left: 0
+			right: 0
+			bottom: 0
+			top: 0
+			margin: 20px 18px
+		span
+			color: #fff
+			font-family: $font-Raleway
+			font-size: em(28)
+			line-height: 30px
+			display: block
+			width: 100%
+			font-weight: 600
+			text-transform: uppercase
+			letter-spacing: 2.33px
+			position: relative
+			z-index: 10
+			padding-bottom: 19px
+			&::after
+				content: ''
+				position: absolute
+				width: 38%
+				border: 1px solid #fff
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+
+.product-slider
+	position: relative
+	.lSSlideWrapper
+		position: static
+
+	.lSAction > a
+		top: -95px
+		margin-top: 0
+	.lSAction > .lSNext
+		right: 0
+	.lSAction > .lSPrev
+		right: 51px
+		left: auto
+	.lSSlideOuter .lSPager.lSpg > li a
+		background-color: transparent
+		border-radius: 0
+		height: 10px
+		width: 10px
+		border: 1px solid $blue
+	.lSSlideOuter .lSPager.lSpg > li:hover a,
+	.lSSlideOuter .lSPager.lSpg > li.active a
+		background-color: $blue
+	.lSSlideOuter
+		user-select: auto
+
+.product
+	box-shadow: inset 0 0 0 1px $blue
+	background-color: #fff
+	height: 606px
+	position: relative
+	overflow: hidden
+	a
+		text-decoration: none
+	&:hover
+		box-shadow: inset 0 0 0 2px $blue-light
+		.product-title::before
+			border-color: $blue-light
+
+.product-picture
+	overflow: hidden
+	height: 310px
+	text-align: center
+	display: table
+	width: 100%
+	a
+		display: table-cell
+		height: inherit
+		vertical-align: middle
+	img
+		max-width: 95%
+		max-height: 95%
+
+.product-title
+	font-family: $font-Raleway
+	font-size: em(30)
+	font-weight: 600
+	line-height: 24px
+	letter-spacing: 2.25px
+	text-align: center
+	position: relative
+	margin-bottom: 10px
+	&::before
+		content: ''
+		position: absolute
+		z-index: 9
+		border-bottom: 1px solid $blue
+		left: 0
+		right: 0
+		top: 15px
+	span
+		display: inline-block
+		padding: 2px 10px
+		background-color: #fff
+		position: relative
+		z-index: 10
+		color: #000
+
+.product-body
+	padding: 5px 38px
+
+.product-description
+	font-size: em(12)
+	line-height: 16px
+	letter-spacing: 0.9px
+
+.product-table
+	margin-top: 22px
+	margin-bottom: 10px
+	table
+		border-collapse: collapse
+		width: 100%
+		td
+			padding: 7px 0
+		td:first-child
+			letter-spacing: 1.05px
+		td:nth-child(2)
+			color: $blue
+			padding-left: 5px
+			font-size: em(18)
+			font-weight: 500
+			line-height: 24px
+			letter-spacing: 1.35px
+
+.product-buttons
+	display: flex
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	>div
+		width: 100%
+		&:first-child a
+			border-right: 0
+			padding-right: 16px
+		&:first-child:last-child a
+			border-right: 1px solid $blue
+	a
+		color: $blue
+		font-size: em(18)
+		background-color: #fff
+		line-height: 24px
+		letter-spacing: 1.35px
+		display: block
+		padding: 10px 15px
+		border: 1px solid $blue
+		text-align: center
+		transition: all .3s ease-in-out
+		&:hover
+			background-color: $blue
+			color: #fff
+
+.counters
+	background-color: #d3ebfa
+	padding: 25px 0 20px
+	border-top: 1px solid rgba(61,77,107,.4)
+	.flex
+		justify-content: center
+
+.footer
+	background: url('../img/footer-back.jpg') 50% 0 no-repeat #092d4a
+	.footer-logo
+		margin-top: 10px
+	.flex
+		justify-content: space-between
+
+.footer-upper
+	padding: 23px 0
+	.flex
+		align-items: center
+		.item
+			&:first-child
+				width: 300px
+			&:nth-child(2)
+				margin-right: auto
+	.main-menu
+		margin-left: -19px
+
+.footer-center
+	border-top: 2px dotted rgba(255,255,255,.4)
+	padding: 20px 0 25px
+	letter-spacing: 0.7px
+	font-family: $font-Raleway
+	font-weight: 400
+	.flex
+		.item
+			width: 300px
+			margin-right: auto
+			position: relative
+			&:first-child
+				margin-right: 0
+			&:last-child
+				width: auto
+				margin-right: 0
+	.city
+		font-weight: 600
+	h5
+		margin-bottom: 20px
+	*
+		color: #fff
+	.email
+		font-size: em(20)
+		line-height: 22px
+		margin-top: 3px
+		font-weight: 600
+		a
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.links
+		font-family: $font-Roboto
+		position: absolute
+		bottom: 10px
+
+.footer-bottom
+	background-color: #1b2330
+	text-align: center
+	padding: 15px 0
+
+.copyright
+	color: #b7d9ff
+	font-size: 14px
+	line-height: 16px
+	letter-spacing: 0.7px
+
+.footer-phones
+	margin-top: 12px
+
+.inner-page
+	background: url('../img/inner-back.jpg') 50% 0 no-repeat
+	background-size: cover
+	.header
+		min-height: 0
+	.header-upper::after
+		display: none
+	.header-center
+		margin-bottom: 27px
+		.main-menu li a:hover
+			color: #356ca9
+			border-color: #356ca9
+			&::after
+				display: none
+		*
+			color: #000
+		.basket-block a::after,
+		.main-menu li a::after
+			border-color: #000
+		.basket-block
+			a:hover
+				color: #356ca9
+			.basket-quantity
+				color: #fff
+			.st0
+				fill: #000
+		.search-block
+			input
+				border-color: #000
+				&::-webkit-input-placeholder
+					color: #000
+				&:-moz-placeholder
+					color: #000
+				&::-moz-placeholder
+					color: #000
+				&:-ms-input-placeholder
+					color: #000
+			button
+				background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADUrlraAAAARnRSTlMABG/N/+KSJDHj5N9rHv6WD2do1GopHEK8Y5iXQf30wBrZDbofC4VbCieTdaSnYskBzCVIrJ/BypQwfrfFmk6LE+aE7oEgMfUKfwAAAJlJREFUeNpdi1USwkAQBRfoYMHdSXAJ7u73vxIRNlWkP96b6pkRJj5/AJRgSEjCEYiqQOwn4gmS5jqVhoxjsuScIQ8Fq4uU5HuZilVVakJSb1jZRHONTsvMNh3XKHTN7NGXYoBi1RBVmhFjuw0mjpgyc4b5Ar281FZrMOT1Bpvtjr1Uh+PpfLmKucpN/HN/8PQo7cXboz6q8QU2WQs86dOTdAAAAABJRU5ErkJggg==')
+
+.main-section
+	display: flex
+	justify-content: space-between
+
+.sidebar
+	width: 260px
+	.navigation-left
+		background: #fff
+		padding: 25px 30px 30px 40px
+		width: auto
+		height: auto
+		margin: 0
+		*
+			color: #000
+		&::before
+			margin: 0
+			border-color: $blue
+		.active a,
+		a:hover
+			color: #356ca9
+
+.main-block
+	width: 880px
+
+.breadcrums
+	padding: 0
+	margin: 0 0 20px
+	list-style: none
+	li
+		display: inline-block
+		letter-spacing: 0.7px
+		color: #0379aa
+		&::before
+			content: '/'
+			color: #000
+			margin-right: 5px
+			margin-left: 2px
+			vertical-align: middle
+		&:first-child::before
+			display: none
+	a
+		color: #000
+
+.catalog
+	display: flex
+	margin-left: -6.5px
+	margin-right: -6.5px
+	flex-wrap: wrap
+	.item
+		width: 33.3334%
+		padding: 0 6.5px 13px
+	.product
+		height: 100%
+		padding-bottom: 55px
+		padding-top: 20px
+	.product-title
+		font-size: em(24)
+		line-height: 24px
+		letter-spacing: 2.25px
+		height: 56px
+		overflow: hidden
+	.product-body
+		padding: 5px 28px
+	.product-table
+    margin-top: 0
+    margin-bottom: 20px
+	.product-picture
+		height: 225px
+	.infoB
+		width: 45px
+	.info
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAXCAYAAAAss+5LAAAAdklEQVQoU2P0KlpwlYGBUZQBDP6/ZvQqWviOgYFBECLA8B4k8J6BgUEAKvCB0at4gd3/fwwcIAFGJoYfjFAZOIUp4FW0cAYDAwMfVMknkKFfGBgYuKECXxm9iha8YGBgFIe64+UwE1j4loGBQQjq23cgz6GEOgAGB1SwQwJ8FgAAAABJRU5ErkJggg==')
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		width: 45px
+		height: 100%
+		&:hover
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAXCAYAAAAss+5LAAAAYUlEQVQoU93QUQpAUBCF4f++KSWU7MY6bcweSO6VKG9Hk0nJDszLTF/T1JkgaQAa7pqDpAhUDskgAaXDatABmcMZfHjaFyT1QOErm93YgdzhMBiB1mH6GyxA7eGihXt9/QKD62XfW+K7JAAAAABJRU5ErkJggg==')
+
+.product-page
+	display: flex
+	>div:last-child
+		width: 100%
+	.selectboxit-container
+		display: block
+		.selectboxit-options,
+		.selectboxit
+			width: 100% !important
+
+.pictures-block
+	text-align: center
+	width: 340px
+	margin-right: 37px
+	a
+		display: flex
+		align-items: center
+		background-color: #fff
+		border: 1px solid $blue
+		padding: 1px
+		&:hover
+			box-shadow: 3px 4px 17px 1px rgba(38, 86, 137, 0.2), 0 0 0 1px $blue-light inset
+			border-color: $blue-light
+	.picture
+		img
+			max-width: 100%
+		a
+			height: 340px
+	.product-thumbs
+		display: flex
+		margin-top: 20px
+		margin-left: -10px
+		margin-right: -10px
+		a
+			height: 95px
+		img
+			max-width: 100%
+		>div
+			width: 33.3334%
+			padding: 0 10px
+
+.selectboxit-btn
+	border-bottom: 1px solid $blue
+.selectboxit-arrow
+	width: 11px
+	height: 6px
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAYAAAAVMmT4AAAAm0lEQVQoU2M0yV1VemZyWDcDAQBSx2iWvaKLgYHx7amp4Z241JtlryxnYPgvzAhSYJq7soPhH8PH01PD29E1mGavrGRgYuA/PTm8AqwYrCFnZRsjw/+vp6ZEtMLEzHJWVP9nYOQ+PSW8CiQGVwzimOSsaGFkYPx5ekp4s2nOytr/DP/Zz0yJqIFpRlEMtaEJ5AeQG09PCa9DdhYAMLgzmmMMS30AAAAASUVORK5CYII=')
+.selectboxit-arrow-container
+	width: 11px
+.selectboxit-list
+	background: #fff
+.selectboxit-option
+	.selectboxit-option-icon-container
+		display: none
+	.selectboxit-option-anchor
+		padding-left: 20px
+		&:hover
+			box-shadow: inset 2px 0 0 0 $blue-light
+			background: #f1f8ff
+.selectboxit-open
+	.selectboxit-arrow
+		transform: rotate(180deg)
+
+.product-reset-btn
+	width: 21px
+	height: 21px
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAq0lEQVQ4T2M0zVn5n4HKgBFk6KnJYVQz1ix3FcOooZhh6ujoyFBbW8vg5OSEM6z37dvH0NzczLB//34UNTjDFKQhLCyMYdWqVVgNxiePN6JwaSRkIcHYRzeAkIGgcCBoKEgRzKCSkhKGnp4enEECC1iiDAUp7ujoYKisrGRob29nqKiowJtRiDKU6i6lephSPfYJxTJZ6ZQmOYqScpCo2CfVgiFoKKleJKQeAHD42xPNNC63AAAAAElFTkSuQmCC')
+	border: 0
+	cursor: pointer
+	&:hover
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAnUlEQVQ4T2P85OH4n4HKgHHUUPqEKVdnH8PPZYsZ/l48jzMKmfUNGdijYhm+lRdhqMEaUSANnFX1DN/bGrEaTEgeZ+zj0kjIQJCz8SYpdAOIMZCgoSAFMIN+rV3JwBYcjjNIkAOWqMTPFhbJwJ6YyvBz/myGX6uWE8x/BA2lukupHqZUj31CsUxIHmuY0iRHEYxeAgoIxj45FoxwQwEKI6YYTbZFFwAAAABJRU5ErkJggg==')
+
+.select-block
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	margin-bottom: 40px
+	>div:first-child
+		width: 85%
+.product-price
+	color: $blue
+	font-size: em(30)
+	font-weight: 400
+	letter-spacing: 1.5px
+.product-price-block
+	margin-top: 30px
+
+.table
+	width: 100%
+	border-collapse: collapse
+	margin: 1px
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		box-shadow: 0 0 0 1px $blue
+	th
+		color: #fff
+		font-size: em(18)
+		font-weight: 400
+		letter-spacing: 0.9px
+		background: $blue
+		text-align: left
+		padding: 14px 0
+		&:first-child
+			padding-left: 44px
+		&:last-child
+			padding-right: 44px
+	td
+		color: #000
+		text-align: left
+		font-size: em(16)
+		font-weight: 300
+		letter-spacing: 0.8px
+		background: #fff
+		padding: 27px 0
+		border-bottom: 1px solid #d2e6fa
+		position: relative
+		&:first-child
+			padding-left: 44px
+			&::before
+				content: ''
+				position: absolute
+				width: 44px
+				left: 0
+				top: 0
+				bottom: -1px
+				background: #fff
+		&:last-child
+			padding-right: 44px
+			&::after
+				content: ''
+				position: absolute
+				width: 44px
+				right: 0
+				top: 0
+				bottom: -1px
+				background: #fff
+	tr:last-child td
+		border-bottom: 0
+		&::before,
+		&::after
+			display: none
+
+.content
+	font-size: em(16)
+	line-height: 22px
+	h3
+		margin-top: 40px
+.hidden-text
+	display: none
+	p:last-child
+		margin-bottom: 0
+.text-medium
+	font-size: rem(18)
+.text-light
+	font-weight: 300
+.modal
+	h5
+		color: $blue
+		margin-bottom: 30px
+		margin-top: 20px
+
+	.selectboxit-container .selectboxit-options
+		border: 1px solid $blue
+		border-top: 0
+		background: #f3f3f3
+	.product-page
+		max-width: 880px
+
+.contacts
+	padding: 68px
+	min-height: 497px
+	background: url('../img/contacts-back.png') 0 0 no-repeat
+	margin-top: 30px
+.contacts-title
+	color: #fff
+	font-size: em(18)
+	line-height: 26px
+	letter-spacing: 0.9px
+	margin-bottom: 10px
+.contacts-link
+	color: $blue-light
+	font-size: em(30)
+	line-height: 26px
+	text-decoration: underline
+	letter-spacing: 1.5px
+	&:hover
+		text-decoration: none
+
+.basket-form
+	margin-top: 30px
+	.flex .item
+		width: 100%
+	.form-control
+		padding: 10px 20px
+	.form-group
+		margin-bottom: 30px
+	label
+		margin-bottom: 15px
+
+.basket-page
+	display: flex
+	border-bottom: 1px dashed #4a72a1
+	margin-bottom: 20px
+	>div:nth-child(2)
+		width: 100%
+.basket-page-picture
+	margin-right: 55px
+	margin-bottom: 30px
+	img
+		max-width: 100%
+	a
+		display: flex
+		align-items: center
+		background-color: #fff
+		border: 1px solid $blue
+		padding: 1px
+		width: 140px
+		height: 133px
+		&:hover
+			box-shadow: 3px 4px 17px 1px rgba(38, 86, 137, 0.2), 0 0 0 1px $blue-light inset
+			border-color: $blue-light
+.basket-table
+	width: 100%
+	color: #000
+	font-size: rem(16)
+	font-weight: 400
+	line-height: 24px
+	letter-spacing: 0.8px
+	td
+		padding-bottom: 25px
+		vertical-align: top
+.basket-table-title
+	width: 350px
+	padding-right: 50px
+.basket-table-numbers
+	width: 150px
+.basket-table-price
+	padding-top: 6px
+.basket-table-remove
+	padding-top: 7px
+	width: 20px
+	text-align: right
+.form-number-block
+	background: #fff
+	border: 1px solid $blue
+	display: flex
+	width: 107px
+	height: 37px
+	button,
+	input
+		background: 0
+		border: 0
+	input
+		width: 50px
+		text-align: center
+	button
+		width: 37px
+		cursor: pointer
+.basket-total-price
+	border-bottom: 1px dashed #4a72a1
+	margin-bottom: 30px
+	text-align: right
+	padding-bottom: 20px
+	.for-pay
+		font-size: rem(18)
+		font-weight: 400
+		line-height: 36px
+		letter-spacing: 1.35px
+	.price
+		color: $blue
+		font-size: rem(30)
+		font-weight: 500
+		line-height: 36px
+		letter-spacing: 2.25px
+		margin-left: 25px
+
+
+.mobile-bar
+	padding: 10px 15px
+	display: flex
+	justify-content: space-between
+	display: none
+	button
+		border: 1px solid #fff
+		color: #fff !important
+		background: 0
+		padding: 4px 10px
+		border-radius: 3px
+		cursor: pointer
+		&:hover,
+		&:focus
+			background: #fff
+			color: $blue !important
+
+
+@import 'indents'
+@import 'media'

@@ -1,0 +1,9 @@
+@for $i from 0 through $margin-max-value {
+  @if $i % 5 == 0 {
+    @each $dKey, $d in (t:top, r:right, b:bottom, l:left) {
+      .m#{$dKey}-#{$i} {
+        margin-#{$d}: rem($i) !important;
+      }
+    }
+  }
+}

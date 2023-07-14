@@ -1,0 +1,151 @@
+// normalize.css
+@import 'normalize'
+
+// styles ****
+\:root
+  --btn-color: #95d44b
+  --red: red
+  --pink: #ff0088
+  --bg: #595999
+  --black: #484848
+
+html
+  font-family: 'Roboto', sans-serif
+  font-size: 18px
+  line-height: 1.4
+
+body
+  display: flex
+  background: var(--bg)
+
+.container
+  width: 980px
+  margin: 0 auto
+  padding: 40px 30px
+  background: #fff
+  min-height: 100vh
+
+.btn
+  background: var(--btn-color)
+  font-size: 22px
+  font-weight: 700
+  border: 0
+  padding: 10px 30px
+  cursor: pointer
+  outline: none
+  &:hover
+    --btn-color: #87c043
+  &--medium
+    font-size: 18px
+    padding: 8px 15px
+
+
+.bold
+  font-weight: 900
+.red
+  color: var(--red)
+
+.form-group
+  margin-bottom: 15px
+
+label
+  display: block
+  margin-bottom: 5px
+.form-control
+  border: 1px solid #ccc
+  padding: 10px 15px
+
+.error
+  border-color: var(--red)
+  box-shadow: 0 0 0 1px var(--red) inset
+
+input.form-control
+  width: 300px
+  height: 53px
+
+textarea.form-control
+  width: 600px
+  height: 200px
+  max-width: 100%
+
+.list
+  $self: &
+  list-style: none
+  padding: 0
+  margin: 10px 0
+  >li
+    margin: 5px 0
+  &__link
+    position: relative
+    font-size: 20px
+    color: var(--black)
+    &--triangle
+      display: inline-flex
+      align-items: center
+      &::after
+        content: ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 5px 12px 5px 0
+        border-color: transparent var(--pink) transparent transparent
+        display: inline-block
+        vertical-align: middle
+        margin-left: 5px
+      &.list__link--active
+        &::after
+          transform: rotate(-90deg)
+  &__child
+    list-style: none
+    margin: 0
+    display: none
+
+
+.post-item
+  padding: 15px 20px 20px
+  margin-bottom: 10px
+  background: rgba(#691269, .9)
+  color: white
+  p
+    margin-top: 0
+
+  p,
+  h3
+    &:first-letter
+      text-transform: uppercase
+  h3
+    margin-top: 0
+    margin-bottom: 10px
+  .btn
+    margin-left: auto
+    display: block
+.comment-item
+  font-size: 13px
+  padding: 5px
+  margin-bottom: 0
+  &:not(:last-child)
+    border-bottom: 1px solid #000
+    margin-bottom: 5px
+.comment-input
+  margin: 10px 0
+  width: 50%
+.comments-box:not(:empty)
+  padding: 10px
+  background: rgba(255,255,255,.2)
+
+.showHideGlobal
+  display: flex
+  justify-content: space-between
+  padding: 5px 20px
+  background: rgba(#fff, .7)
+  position: sticky
+  bottom: 0
+
+.addPost-wrap
+  padding: 15px 20px 20px
+  margin-bottom: 20px
+  background: rgba(cyan, .2)
+  border: 1px solid #ccc
+  h2
+    margin-top: 0
+    margin-bottom: 10px

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Khalaimov</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-group">
+      <input id="filter" type="text" class="form-control" placeholder="Введите имя">
+    </div>
+    <div id="app"></div>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+API_URL = 'http://jsonplaceholder.typicode.com';
+$.get({
+  url: API_URL+'/users',
+  dataType: 'json'
+})
+.done(function (data) {
+  $('#app').append('<ul class="list">')
+  console.log(data);
+  for (var i=0; i<data.length; i++) {
+    $('#app .list')
+      .append('<li><a href="#" class="list__link">'+data[i].name+'</a><ul class="list__child">'+
+        '<li>Phone: '+data[i].phone+'</li>'+
+        '<li>Email: '+data[i].email+'</li>'+
+        '<li>City: '+data[i].address.city+'</li>'+
+        '</ul></li>')
+  }
+  $('.list__child').prev('.list__link').addClass('list__link--triangle')
+})
+.fail(function (xhr) {
+  console.log(xhr.status);
+})
+
+
+$('#app').on('click', '.list__link', function(e) {
+  e.preventDefault();
+  $(this)
+    .toggleClass('list__link--active')
+    .next().stop().slideToggle(200)
+})
+
+
+
+$('#filter').on('keyup', function () {
+  if ($(this).val().length >= 3){
+    // $('.list__link').hide();
+    // $('.list__link:contains("'+$(this).val()+'")').show();
+
+    $('.list__link').filter(function(){
+        return $(this).text().indexOf($('#filter').val()) !== 0;
+    }).hide();
+
+  } else {
+    $('.list__link').show();
+  }
+})
+</script>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&amp;subset=cyrillic" rel="stylesheet">
+</body>
+</html>

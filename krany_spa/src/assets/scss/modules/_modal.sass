@@ -1,0 +1,133 @@
+.modal
+  $t: &
+  max-width: 630px
+  width: 100%
+  +bp(xs,'+')
+    max-width: 100%
+  max-height: calc(100vh - 30px)
+  position: absolute
+  top: 0
+  margin-top: -25px
+  pointer-events: none
+  transition: 0.35s ease-in-out
+  opacity: 0
+  will-change: opacity, margin-top
+  +bp(xs)
+    border-radius: $bRadius
+  background-color: $modal-background
+  border: $modal-border
+  color: inherit
+  &--no-border
+    border: 0
+  &__wrap
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-height: calc(100vh - 30px)
+    
+  &.open
+    opacity: 1
+    margin-top: 0
+    pointer-events: inherit
+    position: relative
+    top: auto
+  &--xs
+    max-width: 480px
+  &--sm
+    max-width: $bp-sm
+  &--md
+    max-width: ($bp-md - 61px)
+  &--lg
+    max-width: #{$bp-lg - $indent}
+
+  a:not(.btn)
+    color: currentColor
+  &__title
+    @extend .h3
+    text-align: center
+    margin: 0
+
+  &__body
+    padding: 10px 25px
+    +bp(xs)
+      padding-left: 50px
+      padding-right: 50px
+    flex-grow: 1
+    overflow-y: auto
+    +bp(xs,'+')
+      display: flex
+      flex-direction: column
+      align-items: stretch
+  &__header
+    padding: 60px 25px 10px
+    +bp(xs)
+      padding-top: 40px
+      padding-left: 50px
+      padding-right: 50px
+  &__footer
+    overflow: hidden
+    flex-shrink: 0
+    padding: 20px 25px 40px
+    +bp(xs)
+      padding-left: 50px
+      padding-right: 50px
+    border-radius: 0 0 8px 8px
+
+  &__close
+    +abs(18px, 18px, auto, auto, 10)
+    margin: auto
+    width: 30px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    @include transition(color)
+    &:hover 
+      color: $link-color
+    &::after
+      content: '\2716'
+      font-style: normal
+      font-size: rem(30)
+      color: currentColor
+    cursor: pointer
+
+.modal-active
+  overflow: hidden
+
+.modal-back-color
+  opacity: 0
+  visibility: hidden
+  +transition
+  will-change: opacity, visibility
+  &--active
+    opacity: 1
+    visibility: visible
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 999
+  background-color: $modal-overlay-background
+  // mix-blend-mode: multiply
+  transition: 0.35s ease-in-out
+  // +iefix
+  //   background-color: rgba($modal-overlay-background, .6)
+
+.modal-overlay
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 15px
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  opacity: 0
+  pointer-events: none
+  overflow-y: auto
+  &.open
+    opacity: 1
+    pointer-events: inherit

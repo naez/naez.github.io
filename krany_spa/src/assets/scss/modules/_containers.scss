@@ -1,0 +1,107 @@
+.container-small {
+  padding-left: calc(#{$indent} * 1px);
+  padding-right: calc(#{$indent} * 1px);
+  width: 100%;
+  @include bp(1040px) {
+    width: calc(#{$container-small_width} * 1px);
+  } 
+  @include bp(md) {
+    width: calc(#{$bp-md} - 31px);
+  }
+  @include bp(sm) {
+    width: calc(#{$bp-sm} - 31px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container-medium {
+  padding-left: calc(#{$indent} * 1px);
+  padding-right: calc(#{$indent} * 1px);
+  width: 100%;
+  @include bp(xl) {
+    width: calc(#{$container-medium_width} * 1px);
+  }
+  @include bp(lg) {
+    width: calc(#{$bp-lg} - 81px);
+  }
+  @include bp(md) {
+    width: calc(#{$bp-md} - 21px);
+  }
+  @include bp(sm) {
+    width: calc(#{$bp-sm} - 61px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.container-large { 
+  padding-left: calc(#{$indent} * 1px);
+  padding-right: calc(#{$indent} * 1px);
+  @include bp(xxl) {
+    width: 100%;
+    max-width: calc(#{$container-large_width} * 1px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include bp(xl) {
+    width: 100%;
+    max-width: $bp-xl;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include bp(lg) {
+    width: 100%;
+    max-width: calc(#{$container-width} + 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include bp(md) {
+    width: 100%;
+    max-width: $bp-md;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include bp(xl,'+') {
+    .container {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+.container {
+  $t: &;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(#{$indent} * 1px);
+  padding-right: calc(#{$indent} * 1px);
+  width: 100%;
+  @include bp(xl) {
+    .container-medium {
+      margin-left: calc(#{$indent} * -1px);
+      margin-right: calc(#{$indent} * -1px)
+    }
+  }
+  @include bp(lg) {
+    width: calc(#{$container_width + 2 * $indent});
+  }
+  @include bp(md) {
+    width: calc(#{$bp-md} - 21px);
+  }
+  @include bp(sm) {
+    width: calc(#{$bp-sm} - 61px);
+  }
+  .container-small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

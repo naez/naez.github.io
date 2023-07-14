@@ -1,0 +1,48 @@
+
+.pagination
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  align-items: baseline
+  &__li
+    &--show-more
+      margin-right: 100%
+      margin-bottom: 20px
+      white-space: nowrap
+      +bp(sm)
+        margin-right: 20px
+        margin-bottom: 0
+      margin-left: 0
+      .pagination__link
+        padding: 0 20px
+    margin-bottom: 5px
+    &:not(:last-child)
+      margin-right: 10px
+  &__link
+    min-width: 30px
+    height: 30px
+    +bp(xxs)
+      min-width: 40px
+      height: 40px
+      font-size: 18px
+      padding: 0 2px
+    padding: 0 2px
+    color: $color-default
+    background-color: #fff
+    font-size: 16px
+    font-weight: 500
+    text-decoration: none
+    line-height: 22px
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.05)
+    border-radius: $bRadius
+    will-change: background-color, color
+    +transition
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      color: $color-white
+      background: linear-gradient(325.64deg, #60C000 0%, rgba(96, 192, 0, 0) 100%), #489100

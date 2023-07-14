@@ -1,0 +1,368 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  // font-size: #{$font-size-base / 1.125 * 1px};
+  // @include bp(2561px) {
+  //   font-size: #{$font-size-base * 1.5px};
+  // }
+  // @include bp(2461px) {
+  //   font-size: #{$font-size-base * 1.35px};
+  // }
+  // @include bp(el) {
+  //   font-size: #{$font-size-base * 1.25px};
+  // }
+  // @include bp(xxl) {
+  //   font-size: #{$font-size-base * 1.11px};
+  // }
+  @include bp(md) {
+    font-size: #{$font-size-base * 1px};
+  }
+  @include bp(ph) {
+    font-size: #{$font-size-base * .9px};
+  }
+  @include bp(xxs) {
+    font-size: #{$font-size-base * .8px};
+  }
+
+  font-size: #{$font-size-base * .7px};
+  font-style: normal;
+  font-family: $font-family-base;
+  line-height: calc(19/$font_size_base * 1em);
+  color: $font-color;
+  min-width: #{$body-min-width * 1px};
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  background: $background;
+}
+
+a {
+  color: $link-color;
+  @include transition;
+  &:hover {
+    color: $link-color_hover;
+  }
+  &:active {
+    color: $link-color_active;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+}
+
+.border-radius {
+  border-radius: $bRadius;
+}
+
+@each $bp in map-keys($breakpoints) {
+  @media (max-width: map-get($breakpoints, $bp)) {
+    .hide-#{$bp} {
+      display: none !important;
+    }
+  }
+  @media (min-width: map-get($breakpoints, $bp)) {
+    .show-#{$bp} {
+      display: none !important;
+    }
+  }
+}
+
+.price {
+  color: $color-default;
+  display: inline-flex;
+  align-items: baseline;
+  &__value {
+    font-size: rem(20);
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: pre;
+    &:not(:first-child) {
+      margin-left: calc(4/20 * 1em);
+    }
+    &:not(:last-child) {
+      margin-right: calc(4/20 * 1em);
+    }
+    &--small {
+      font-size: rem(16);
+    }
+    &--large {
+      font-size: rem(30);
+      &:not(:first-child) {
+        margin-left: calc(7/24 * 1em);
+      }
+      &:not(:last-child) {
+        margin-right: calc(7/24 * 1em);
+      }
+    }
+    &--extralarge {
+      font-size: rem(40);
+    }
+  }
+  &__prefix,
+  &__suffix {
+    font-weight: 300;
+    line-height: 1;
+    font-size: rem(16);
+    &--small {
+      font-size: rem(13);
+    }
+    &--large {
+      font-size: rem(18);
+    }
+    &--extralarge {
+      font-size: rem(24);
+    }
+  }
+}
+
+.required {
+  color: red;
+}
+
+.svgSprite {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  z-index: -1;
+  left: -1000%;
+}
+
+.img {
+  $imgMarginTop: 0;
+  $imgMarginBottom: 15px;
+  $imgMarginSide: 30px;
+  max-width: 100%;
+  @include bp(580px,'+') {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--left {
+    max-width: 280px;
+    @include bp(md) {
+      max-width: 100%;
+    }
+    @include bp(580px) {
+      float: left;
+      margin-top: $imgMarginTop;
+      margin-right: $imgMarginSide;
+    }
+    margin-bottom: $imgMarginBottom;
+  }
+  &--right {
+    max-width: 280px;
+    @include bp(md) {
+      max-width: 100%;
+    }
+    @include bp(580px) {
+      float: right;
+      margin-top: $imgMarginTop;
+      margin-left: $imgMarginSide;
+    }
+    margin-bottom: $imgMarginBottom;
+  }
+  &--center {
+    margin: 0 auto;
+  }
+  &--block {
+    display: block;
+  }
+}
+.img-block {
+  display: block;
+  max-width: 100%;
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.svg {
+  &--block {
+    display: block;
+  }
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+a .svg {
+  fill: currentColor;
+}
+.content {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.img {
+  display: block;
+}
+
+// .img-border {
+//   width: fit-content;
+//   height: fit-content;
+//   position: relative;
+//   display: block;
+//   @include iefix {
+//     display: inline-block;
+//   }
+//   @at-root {
+//     a#{&}:hover::after {
+//       opacity: .9;
+//     }
+//   }
+//   &::after {
+//     content: '';
+//     opacity: .6;
+//     @include transition(opacity);
+//     border: 10px solid transparent;
+//     border-image: linear-gradient(to top, $color-default 0%, $color-default 40%, #00457d 100%);
+//     border-image-slice: 1;
+//     @include abs(0,0,0,0);
+//   }
+// }
+
+
+
+// Burger button
+.burger {
+  $t: &;
+  flex-shrink: 0;
+  margin-left: 15px;
+  display: block;
+  // margin-right: auto;
+  cursor: pointer;
+  padding: 9px 8px 8px;
+  width: 50px;
+  height: 40px;
+  margin-right: 0;
+  color: $color-white !important;
+  background: $color-default;
+  &::before,
+  &::after,
+  &__line {
+    content: '';
+    display: block;
+    padding-top: 3px;
+    background-color: currentColor;
+    will-change: transform;
+  }
+  &__line {
+    margin: 7px 0;
+    opacity: 1;
+    will-change: opacity;
+    @include transition(opacity, 150ms);
+  }
+  &--inactive {
+    &::before {
+      animation: burgerTopLineReverse .4s ease-in-out forwards;
+    }
+    &::after {
+      animation: burgerBottomLineReverse .5s forwards ease-in-out;
+    }
+  }
+  &--active {
+    &::before {
+      animation: burgerTopLine .4s forwards ease-in-out;
+    }
+    &::after {
+      animation: burgerBottomLine .4s forwards ease-in-out;
+    }
+    #{$t}__line {
+      opacity: 0;
+    }
+  }
+  @keyframes burgerTopLine {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(10px) rotate(45deg);
+    }
+  }
+  @keyframes burgerTopLineReverse {
+    0% {
+      transform: translateY(10px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  } 
+  @keyframes burgerBottomLine {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+  @keyframes burgerBottomLineReverse {
+    0% {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.scroll-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-default;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  right: 20px;
+  @include bp(1800px) {
+    right: 100px
+  }
+  bottom: 20px;
+  top: auto;
+  opacity: 0;
+  will-change: opacity;
+  @include transition(opacity);
+  &.headroom--not-top {
+    opacity: 1;
+    transform: none
+  }
+  &__icon {
+    fill: $color-white
+  }
+}

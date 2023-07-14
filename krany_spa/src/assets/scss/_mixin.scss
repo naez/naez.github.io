@@ -1,0 +1,189 @@
+$breakpoints: (
+  el : $bp-el, 
+  xxl: $bp-xxl, 
+  xl : $bp-xl, 
+  lg : $bp-lg, 
+  md : $bp-md, 
+  sm : $bp-sm, 
+  ph : $bp-ph, 
+  xs : $bp-xs, 
+  xxs: $bp-xxs
+);
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+// Breakpoints
+@mixin bp ($point, $key: '-') {
+  @each $bp in map-keys($breakpoints) {
+    @if ($point == $bp) {
+      @if ($key == '+') {
+        @media (max-width: map-get($breakpoints, $bp)) {
+          @content;
+        }
+      } @else {
+        @media (min-width: #{map-get($breakpoints, $bp) + 1px}) {
+          @content;
+        }
+      }
+    } @else {
+      @if ($key == '+') {
+        @media (max-width: $point) {
+          @content;
+        }
+      } @else {
+        @media (min-width: $point) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+// px to rem
+@function rem($pixels, $context: $font-size-base) {
+  @return calc(#{$pixels/$context} *1rem);
+}
+// px to em
+@function em($pixels) {
+  @return calc(#{$pixels/$font_size_base} * 1em);
+}
+
+
+// Процент от ширины блока
+@function percent($x, $y: 0) {
+  @if ($y == 0) {
+    $y: $container-width;
+  }
+  @else if ($y == 'lg') {
+    $y: $container-large-width;
+  }
+  @else if ($y == 'sm') {
+    $y: $container-small-width;
+  }
+  @return calc($x * 100/$y * 1%);
+}
+
+@mixin fz($fz, $lh: false, $fw: 400) {
+  font-size: rem($fz);
+  font-weight: $fw;
+  @if $lh {
+    line-height: calc($lh/$fz * 1em);
+  } @else {
+    line-height: 1.2;
+  }
+}
+
+@mixin lg($direction, $color_1, $color_2) {
+  background-image: linear-gradient($direction, $color_1 0%, $color_2 100%);
+}
+
+// Triangle generator
+%triangles {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  display: inline-flex;
+}
+@mixin triangleT($bw1, $bw2, $bcolor: currentColor) {
+  @extend %triangles;
+  border-top-color: $bcolor;
+  border-width: #{$bw1*1px} #{$bw2*1px} 0;
+}
+
+// Position: absolute
+@mixin abs(
+    $top: auto, 
+    $right: auto, 
+    $bottom: auto, 
+    $left: auto, 
+    $zIndex: auto
+  ) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $zIndex;
+  }
+
+// Transition default
+@mixin transition(
+    $property: all, 
+    $duraion: #{$transition-duration}, 
+    $func: #{$transition-timing-function}, 
+    $delay: 0s
+  ) {
+    transition: $property $duraion $func $delay;
+  }
+
+
+@mixin iefix {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin webp(
+    $imgName, 
+    $imgExt: 'jpg', 
+    $imgPos: '0', 
+    $imgSize: 'cover',
+    $imgRepeat: 'no-repeat'
+  ) {
+    background-image: url('../img/#{$imgName}.webp');
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-image: url('../img/#{$imgName}.#{$imgExt}');
+    }
+    @media not all and (min-resolution: .001dpcm) {
+      @supports (-webkit-appearance:none) {
+        background-image: url('../img/#{$imgName}.#{$imgExt}');
+      }
+    }
+    @media not all and (min-resolution: .001dpcm) {
+      background-image: url('../img/#{$imgName}.#{$imgExt}');
+    }
+
+    background-position: #{$imgPos};
+    background-size: #{$imgSize};
+    background-repeat: #{$imgRepeat};
+  }
+
+
+// base64 images
+@mixin base64img($img, $format:'svg+xml') {
+  background-image: url('data:image/#{$format};base64,#{$img}')
+}
+
+
+@mixin unify-parent($child) {
+  @at-root #{selector-unify(&, $child)} {
+    @content;
+  }
+}
+
+
+
+@mixin text-gradient($firstColor: salmon, $secondColor: pink, $direction: 'to right') {
+  background-image: linear-gradient(#{$direction}, $firstColor 0%, $secondColor 100%);
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  @include iefix {
+    background-image: none;
+    color: $orange
+  }
+}
+
+
+
+
+
+

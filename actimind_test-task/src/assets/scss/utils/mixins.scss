@@ -1,0 +1,55 @@
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+
+
+// Transitions
+@mixin transition(
+    $property: all, 
+    $duraion: #{$transition-duration}, 
+    $func: #{$transition-timing-function}, 
+    $delay: 0s ) {
+      transition: $property $duraion $func $delay;
+    }
+
+
+@mixin abs(
+    $top: auto, 
+    $right: auto, 
+    $bottom: auto, 
+    $left: auto, 
+    $zIndex: auto
+  ) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $zIndex;
+  }
+
+
+
+  @mixin iefix {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+
+
+
+
+  @mixin unify-parent($child) {
+    @at-root #{selector-unify(&, $child)} {
+      @content;
+    }
+  }

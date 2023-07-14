@@ -1,0 +1,116 @@
+// Flex grid **********************************
+@if ($flex-max-columns != 0) {
+  .f {
+    $t: &;
+    display: flex;
+    &--non-marg {
+      margin-top: 0 !important;
+      #{$t}__item {
+        margin-top: 5px !important;
+      }
+    }
+    @each $i in $flex-indents {
+      $d: #{$i/2 * 1px};
+      $c: #{$i * 1px};
+      &--i-#{$i} {
+        @if ($i>30) {
+          margin: (-$c) (-$d) 0 (-$d);
+          >#{$t}__item {
+            margin-top: $c;
+          }
+          @include bp(md, '+') {
+            margin-top: (-$c);
+            margin-right: #{$d/-2};
+            margin-left: #{$d/-2};
+          }
+        }
+        @else {
+          margin: (#{$i * -1px}) (-$d) 0 (-$d);
+          >#{$t}__item {
+            margin-top: #{$i*1px};
+          }
+        }
+        >#{$t}__item {
+          padding: 0 $d;
+          @if ($i>30) {
+            @include bp(md, '+') {
+              padding: 0 ($d/2);
+            }
+          }
+        }
+      }
+    }
+    &--wrap {
+      flex-wrap: wrap;
+    }
+    &--jc {
+      &-sa { justify-content: space-around }
+      &-sb { justify-content: space-between }
+      &-c  { justify-content: center }
+    }
+    &--wide { width: 100% }
+    &--100 {
+      >#{$t}__item { width: 100% }
+    }
+    &--ai {
+      &-c  { align-items: center }
+      &-bl { align-items: baseline }
+      &-fs { align-items: flex-start }
+      &-fe { align-items: flex-end }
+    }
+    @for $col from 2 through $flex-max-columns {
+      &--col-#{$col} {
+        flex-wrap: wrap;
+        >#{$t}__item {
+          width: calc(100% / #{$col});
+        }
+      }
+    }
+    @each $bp in map-keys($breakpoints) {
+      @media (max-width: map-get($breakpoints, $bp)) {
+        @for $col from 1 through $flex-max-columns {
+          &--col-#{$bp}-#{$col} {
+            @if ($col==1) {
+              margin-top: -15px;
+              >#{$t}__item {
+                margin-top: 15px;
+              }
+            }
+            flex-wrap: wrap;
+            >#{$t}__item {
+              flex-basis: auto;
+              width: calc(100%/$col);
+            }
+          }
+        }
+        @each $i in $flex-indents {
+          @if ($i<=30) {
+            $d: calc($i/2 * 1px);
+            &--i-#{$bp}-#{$i} {
+              margin: calc(#{$i * -1px}) (-$d) 0 (-$d);
+              >#{$t}__item {
+                margin-top: #{$i*1px};
+                padding: 0 $d;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__item {
+      &--as-c {
+        align-self: center;
+      }
+      &--grow {
+        flex-grow: 1;
+      }
+      &--shrink-0 {
+        flex-shrink: 0;
+      }
+      &--wide {
+        width: 100% !important;
+      }
+    }
+  }
+}
+// Flex grid **********************************/

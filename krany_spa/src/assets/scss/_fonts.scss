@@ -1,0 +1,35 @@
+
+// Fonts
+$font_montserrat      : 'Montserrat', sans-serif;
+$font-size_base       : 24;
+$font-size_content    : $font-size_base;
+$font-weight_base     : 400;
+$font-family_base     : $font_montserrat;
+$font-family_headings : $font-family_base;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+
+
+// /* OpenSans */
+
+// @font-face {
+//   font-family: 'OpenSans';
+//   src: url(../fonts/OpenSans/OpenSans.woff) format("woff");
+//   font-weight: 400;
+//   font-style: normal
+// }
+// @font-face {
+//   font-family: 'OpenSans';
+//   src: url(../fonts/OpenSans/OpenSans-Bold.woff) format("woff");
+//   font-weight: 700;
+//   font-style: normal
+// }
+
+// @font-face {
+//   font-family: 'OpenSans';
+//   src: url(../fonts/OpenSans/OpenSans-Semibold.woff2) format("woff2"), url(../fonts/OpenSans/OpenSans-Semibold.woff) format("woff");
+//   font-weight: 500;
+//   font-style: normal
+// }

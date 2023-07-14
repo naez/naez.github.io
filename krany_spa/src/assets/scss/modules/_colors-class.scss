@@ -1,0 +1,35 @@
+.btn {
+  &--styled {
+    border-radius: 65px;
+    color: #444;
+    height: rem(65);
+    background: linear-gradient(to bottom, #FFE748 0%, #FF9E14 100%);
+    padding: 2px;
+    @include fz(14,17,600);
+    text-transform: uppercase;
+    color: $color-blue;
+    .btn__text {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 35px;
+      background-color: #fff;
+      border-radius: inherit;
+    }
+    &:hover {
+      color: $color-default
+    }
+    &::after {
+      background: #FF9E14
+    }
+    &:active {
+      color: $color-default
+    }
+  }
+}
+.form-control {
+  border-radius: 40px;
+}
