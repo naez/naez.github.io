@@ -1,0 +1,7 @@
+.select {
+  .el-input {
+    --el-input-bg-color: #{$background};
+    --el-text-color-regular: #{$textMuted};
+    --el-input-border-color: #{$textMuted};
+  }
+}
